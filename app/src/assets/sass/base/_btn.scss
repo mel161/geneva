@@ -170,8 +170,6 @@ $active-color: $accent;
     border: 0;
     width: 80px;
     height: 80px;
-    display: -webkit-flex;
-    display: -ms-flex;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,7 +177,7 @@ $active-color: $accent;
     top: -40px;
     left: 50%;
     margin-left: -40px;
-    z-index: 5;
+    z-index: 10;
     background-color: #505050;
     border-radius: 50%;
 

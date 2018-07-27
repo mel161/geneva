@@ -37,18 +37,18 @@
     }
   };
   @include variant(to-down) {
-    margin       : 0;
-    position     : fixed;
-    bottom       : -40px;
-    display      : block;
-    left         : 50%;
-    margin-left  : -40px;
-    z-index      : 5;
-    width        : 80px;
-    height       : 80px;
-    border-radius: 50%;
-    text-align   : center;
-    line-height  : 80px;
+    margin          : 0;
+    position        : fixed;
+    bottom          : -40px;
+    display         : block;
+    left            : 50%;
+    margin-left     : -40px;
+    z-index         : 5;
+    width           : 80px;
+    height          : 80px;
+    border-radius   : 50%;
+    text-align      : center;
+    line-height     : 80px;
     background-color: #505050;
 
     .icon {
@@ -62,15 +62,15 @@
     &:hover {
       background-color: $accent;
     }
-
     @media (min-width: 960px) {
       background-color: transparent;
-      bottom: 60px;
-      position: absolute;
+      bottom          : 60px;
+      position        : absolute;
 
       .icon {
         margin: 20px 0 0;
       }
+
       &:hover {
         background-color: rgba($white, .2);
       }
@@ -94,12 +94,21 @@
   }
   @include variant(list) {}
   @include variant(phone) {
-    font-size    : 11px;
-    color        : $white;
-    line-height  : 1.2;
+    font-size  : 11px;
+    color      : $white;
+    line-height: 1.2;
 
+    .footer & {
+
+      @media (min-width: 960px) {
+        position: absolute;
+        right   : 40px;
+        top     : 60px;
+      }
+
+    }
     @media (min-width: 960px) {
-      font-size: 20px;
+      font-size    : 20px;
       margin-bottom: 10px;
     }
 

@@ -193,10 +193,10 @@ $(function() {
 
   jQuery(document).ready(function($) {
     var theButton = $('#js-nav-toggle');
-    var theMenu = $('.nav--main');
+    var theMenu = $('.footer__inner');
 
     theButton.click(function() {
-      theMenu.toggleClass('nav--visible');
+      theMenu.toggleClass('footer__inner--visible');
       theButton.toggleClass('btn--nav-active')
     });
   });

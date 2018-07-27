@@ -51,7 +51,7 @@ $margin-large: 60px;
     z-index    : 2;
   };
   @include variant(footer) {
-    margin-right: 0;
+    margin: 0 0 40px;
 
     @media (min-width: 960px) {
       margin-right: 80px;
@@ -61,6 +61,11 @@ $margin-large: 60px;
       width: 168px;
       height: 60px;
       margin: 0;
+
+      @media (min-width: 960px) {
+        width: 195px;
+        height: 70px;
+      }
     }
   };
   // Style

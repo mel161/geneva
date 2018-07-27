@@ -235,6 +235,9 @@ $muted-color: $grey-m;
     // Styles
     margin: 0;
   };
+
+
+
   @include has(image) {
     // Modifiers
     @include variant(vk) {
@@ -252,6 +255,34 @@ $muted-color: $grey-m;
 
     path {
       fill: $grey-color;
+    }
+  };
+
+  @include variant(footer) {
+    border-top: 1px solid #505050;
+    width: 100%;
+
+    .nav__item {
+      padding: 20px;
+      border-bottom: 1px solid #505050;
+      margin-bottom: 0;
+
+      .nav__item {
+        border: 0;
+      }
+    }
+    .nav__link {
+      color: $white;
+      line-height: 1;
+
+    }
+
+    @media (min-width: 960px) {
+      width: 900px;
+
+      .nav__list {
+        display: none;
+      }
     }
   };
   // Style
