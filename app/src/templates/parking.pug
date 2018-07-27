@@ -1,0 +1,27 @@
+extends ./views/_layout.pug
+block vars
+  - var pageTitle = 'Parking'
+  - var bodyClass = 'parking'
+
+block content
+  .page
+    //- Top Panel
+    include includes/_top-panel
+    //- Top Panel End
+    main.content#js-top
+      header.header.header--main
+        .header__inner   
+          h1.heading.heading--main.heading--single Паркинг
+      section.section.section--horizontal
+        .container
+          .section__header
+            h2.section__title Всему свое место. Вашему автомобилю тоже
+          .section__inner
+            p.section__text Ваш автомобиль будет ждать встречи с вами в безопасности и тепле на двухуровневом подземном паркинге. Снег, дождь, метель? Не важно. На паркинг вы попадаете, минуя улицу, спустившись на скоростном лифте прямо из дома.
+            p.section__text Необходимости тратить время на поиски больше не возникнет — ваше место будет ждать вас в любое время суток. 
+      .container.container--parking
+        img(src="./assets/img/parking.jpg" alt="Схема парковки")
+      
+    //- Footer
+    include includes/_footer
+    //- Footer End  

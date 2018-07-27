@@ -1,0 +1,35 @@
+//// Map
+// Variables
+$margin-base: $margin;
+$margin-large: 60px;
+$margin-big: $margin * 2;
+
+.map {
+  // Modifier
+  @include variant(contact) {
+    display        : flex;
+    justify-content: space-between;
+    margin         : 0 $margin-base/2 80px;
+  };
+  @include has(container) {
+    flex-basis: calc(50% - 10px);
+
+    img {
+      width: 100%;
+    }
+  };
+  // Styles
+  .nav {
+    // margin-left: $margin-big;
+    margin: $margin-large auto $margin;
+  }
+
+  & + .link {
+    margin-left: $margin-big;
+  }
+
+  #map {
+    width: 100%;
+    height: 600px;
+  }
+}

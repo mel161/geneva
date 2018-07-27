@@ -1,0 +1,132 @@
+extends ./views/_layout.pug
+block vars
+  - var pageTitle = 'About News'
+  - var bodyClass = 'about'
+
+block content
+  .page
+    //- Top Panel
+    include includes/_top-panel
+    //- Top Panel End
+    main.content#js-top
+      header.header.header--main
+        .header__inner   
+          //- h1.heading.heading--main О доме
+          nav.nav.nav--inline
+            ul.nav__list
+              li.nav__item
+                a(href="about-architect.html").nav__link Архитектура
+              li.nav__item
+                a(href="about-quality.html").nav__link Качество жизни
+              li.nav__item
+                a(href="about-location.html").nav__link Расположение
+              
+              li.nav__item.nav__item--divider
+                .heading.heading--main В центре жизни
+              
+              li.nav__item
+                a(href="about-docs.html").nav__link Документы
+              li.nav__item
+                a(href="about-building.html").nav__link Ход строительства
+              li.nav__item.nav__item--active
+                a(href="about-news.html").nav__link Новости
+        
+      section.section.section--news        
+        a(href="about-single-news.html").card.card--news
+          .card__image-container
+            img(src="./assets/img/news-1.jpg" alt="").card__image
+          .card__inner
+            h3.card__title «Покупают район, а не квартиру»: почему уральцы выбирают ...
+        
+        a(href="about-single-news.html").card.card--news
+          .card__image-container
+            img(src="./assets/img/news-2.jpg" alt="").card__image
+          .card__inner
+            h3.card__title И парк, и центр: чем новый дом покорил сердца горожан
+        
+        a(href="about-single-news.html").card.card--news
+          .card__image-container
+            img(src="./assets/img/news-3.jpg" alt="").card__image
+          .card__inner
+            h3.card__title Сбежали от пробок и спальных районов ближе к возможностям семья ...
+        
+        a(href="about-single-news.html").card.card--news
+          .card__image-container
+            img(src="./assets/img/news-4.jpg" alt="").card__image
+          .card__inner
+            h3.card__title Весь район обошла с секундомером: чего хотят женщины ...
+        
+        a(href="about-single-news.html").card.card--news
+          .card__image-container
+            img(src="./assets/img/news-5.jpg" alt="").card__image
+          .card__inner
+            h3.card__title От холостяцкой берлоги до семейного гнёздышка: подбор планировок ...
+        
+        a(href="about-single-news.html").card.card--news
+          .card__image-container
+            img(src="./assets/img/news-1.jpg" alt="").card__image
+          .card__inner
+            h3.card__title «Покупают район, а не квартиру»: почему уральцы выбирают ...
+        
+        a(href="about-single-news.html").card.card--news
+          .card__image-container
+            img(src="./assets/img/news-2.jpg" alt="").card__image
+          .card__inner
+            h3.card__title И парк, и центр: чем новый дом покорил сердца горожан
+        
+        a(href="about-single-news.html").card.card--news
+          .card__image-container
+            img(src="./assets/img/news-3.jpg" alt="").card__image
+          .card__inner
+            h3.card__title Сбежали от пробок и спальных районов ближе к возможностям семья ...
+        
+        a(href="about-single-news.html").card.card--news
+          .card__image-container
+            img(src="./assets/img/news-4.jpg" alt="").card__image
+          .card__inner
+            h3.card__title Весь район обошла с секундомером: чего хотят женщины ...
+        
+        a(href="about-single-news.html").card.card--news
+          .card__image-container
+            img(src="./assets/img/news-5.jpg" alt="").card__image
+          .card__inner
+            h3.card__title От холостяцкой берлоги до семейного гнёздышка: подбор планировок ...
+        
+        a(href="about-single-news.html").card.card--news
+          .card__image-container
+            img(src="./assets/img/news-1.jpg" alt="").card__image
+          .card__inner
+            h3.card__title «Покупают район, а не квартиру»: почему уральцы выбирают ...
+        
+        a(href="about-single-news.html").card.card--news
+          .card__image-container
+            img(src="./assets/img/news-2.jpg" alt="").card__image
+          .card__inner
+            h3.card__title И парк, и центр: чем новый дом покорил сердца горожан
+        
+        a(href="#").card.card--news
+          .card__image-container
+            img(src="./assets/img/news-3.jpg" alt="").card__image
+          .card__inner
+            h3.card__title Сбежали от пробок и спальных районов ближе к возможностям семья ...
+        
+        a(href="about-single-news.html").card.card--news
+          .card__image-container
+            img(src="./assets/img/news-4.jpg" alt="").card__image
+          .card__inner
+            h3.card__title Весь район обошла с секундомером: чего хотят женщины ...
+        
+        a(href="about-single-news.html").card.card--news
+          .card__image-container
+            img(src="./assets/img/news-5.jpg" alt="").card__image
+          .card__inner
+            h3.card__title От холостяцкой берлоги до семейного гнёздышка: подбор планировок ...
+    
+        button(type="button").btn.btn--dashed
+          span.color +
+          span Показать ещё
+          
+    
+    //- Footer
+    include includes/_footer
+    //- Footer End

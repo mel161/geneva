@@ -1,0 +1,44 @@
+$content-header-bg-color: $grey-light;
+$margin-large: $margin;
+$margin-large: 60px;
+
+.main-content {
+  header {
+    width: 100%;
+  }
+}
+
+.header {
+  // Elements
+  @include has(inner) {
+
+  };
+  // Modifiers
+  @include variant(hero) {
+    .header__inner {
+      display   : block;
+      left      : 50%;
+      position  : absolute;
+      text-align: center;
+      top       : 55%;
+      transform : translate(-50%, -50%);
+      z-index   : 2;
+    }
+    // Styles
+    align-items    : center;
+    display        : flex;
+    justify-content: center;
+    width          : 100%;
+  };
+  @include variant(main) {
+    background-color: $content-header-bg-color;
+    padding         : 54px 0 50px;
+    text-align      : center;
+  };
+  @include variant(transparent) {
+    background-color: transparent;
+    margin          : $margin-base 0;
+    text-align      : center;
+  };
+  // Styles
+}

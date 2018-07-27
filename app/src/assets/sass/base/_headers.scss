@@ -1,0 +1,100 @@
+//// Heading
+// Variables
+$padding: $margin * 2;
+$margin-base: $margin;
+$margin-large: 60px;
+$title-font-size: 72px;
+$title-color: $white;
+
+.main-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    width: 100%;
+  }
+  // h1 {
+  //   margin-bottom: 60px;
+  // }
+  //
+  // h2 {
+  //   margin-bottom: $margin;
+  // }
+}
+
+.section--news section__title {
+  display   : none;
+  visibility: hidden;
+}
+
+.heading {
+  // Modifiers
+  @include variant(hero) {
+    color         : $title-color;
+    font-size     : $title-font-size;
+    font-weight   : 300;
+    line-height   : 1;
+    margin-bottom : $margin-large;
+    text-transform: uppercase;
+  };
+  @include variant(hide) {
+    text-indent: -9999px;
+    color      : transparent;
+    width      : 0;
+    height     : 0;
+    line-height: 0;
+    white-space: nowrap;
+  };
+  @include variant(card) {
+    color         : $title-color;
+    font-size     : 32px;
+    font-weight   : 300;
+    line-height   : 1.2;
+    text-align    : left;
+    text-transform: none !important;
+  };
+  @include variant(main) {
+    font-size     : 40px;
+    color         : $black;
+    text-transform: uppercase;
+    line-height   : 1;
+    margin-bottom : $margin-base;
+    font-weight   : 300;
+    margin        : 0;
+    text-align: center;
+
+    // width: 350px;
+    // position: absolute;
+    // left: 50%;
+    // margin-left: -175px;
+  };
+  @include variant(single) {
+    margin-bottom: 0;
+  };
+  @include variant(news) {
+    font-size     : 42px;
+    line-height   : 1.2;
+    text-align    : center;
+    font-weight   : 300;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  };
+  @include variant(contacts) {
+    font-size     : 20px;
+    line-height   : 1.2;
+    text-transform: none;
+    margin-bottom : 30px;
+  };
+  @include variant(office) {
+    font-size     : 20px;
+    line-height   : 1.2;
+    text-transform: none;
+    margin-bottom : 30px;
+  };
+  // Styles
+  text-transform: uppercase;
+  font-weight   : 500;
+  margin        : 0;
+}

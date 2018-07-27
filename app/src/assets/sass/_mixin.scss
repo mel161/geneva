@@ -1,0 +1,93 @@
+// BEM Base Mixin
+@mixin has($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+@mixin variant($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+// Circle links with lines on hover
+@mixin circle-link-hover() {
+  border-radius: 60px;
+  display: block;
+  height : 60px;
+  position: relative;
+  width  : 60px;
+  transition      : all 0.3s ease;
+
+  .btn__lines {
+    background     : linear-gradient(to bottom, #fff, #fff 1px, transparent 1px, transparent);
+    background-size: 100% 3px;
+    border-radius  : 59px;
+    content        : '';
+    display        : block;
+    height         : 59px;
+    left           : 50%;
+    position       : absolute;
+    top            : 50%;
+    transform      : translate(-29.5px, -29.5px);
+    transition     : all 0.3s ease;
+    width          : 59px;
+  }
+
+  .btn__bg {
+    background-color: #505050;
+    border-radius   : 60px;
+    content         : '';
+    display         : block;
+    height          : 60px;
+    left            : 0;
+    position        : absolute;
+    top             : 0;
+    transition      : all 0.3s ease;
+    width           : 60px;
+  }
+
+  > svg {
+    z-index   : 2;
+
+    path {
+      transition: 0.5s ease-in-out .5s;
+    }
+  }
+
+  &:hover {
+    .btn__lines {
+      height : 60px;
+      // left   : calc(50% - 15px);
+      transform: translate(-45px, -30px);;
+      width  : 60px;
+      z-index: 0;
+    }
+
+    .btn__bg {
+      background-color: $accent;
+    }
+
+    > svg path {
+      fill      : $white;
+      transition: 0.25s ease-in-out 0s;
+    }
+  }
+}
+
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

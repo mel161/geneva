@@ -1,0 +1,63 @@
+.image {
+  .main-content & {
+    margin: $margin 0;
+  }
+
+  .map & {
+    max-height: 440px;
+  }
+}
+
+.icon {
+  // Modifiers
+  @include variant(phone) {
+    height      : 14px;
+    margin-right: 10px;
+    width       : 14px;
+  };
+  @include variant(arrow-top) {
+    // background-image   : url('./../img/icon-arrow-top.png');
+    background-position: center;
+    height             : 18px;
+    margin-right       : 0px;
+    width              : 10px;
+    transform          : rotate(-90deg);
+  };
+  @include variant(arrow-down) {
+    // background-image   : url('./../img/icon-arrow-top.png');
+    background-position: center;
+    height             : 18px;
+    margin             : 0;
+    width              : 10px;
+    transform          : rotate(90deg);
+  };
+  @include variant(arrow-left) {
+    background-position: center;
+    height             : 14px;
+    width              : 8px;
+    transform          : rotate(-180deg);
+    margin-right       : 10px;
+    fill               : $grey-m;
+  };
+  @include variant(arrow-right) {
+    background-position: center;
+    height             : 14px;
+    width              : 8px;
+    margin-right       : 0;
+    fill               : $grey-m;
+  };
+  @include variant(link) {
+    height    : 14px;
+    left      : -20px;
+    margin-top: -7px;
+    position  : absolute;
+    top       : 50%;
+    width     : 14px;
+
+    & path {
+      fill: $accent;
+    }
+  };
+  // Styles
+  display: inline-block;
+}

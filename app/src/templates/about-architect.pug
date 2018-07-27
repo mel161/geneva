@@ -1,0 +1,58 @@
+extends ./views/_layout.pug
+block vars
+  - var pageTitle = 'About Location'
+  - var bodyClass = 'about'
+
+block content
+  .page
+    //- Top Panel
+    include includes/_top-panel
+    //- Top Panel End
+    main.content#js-top
+      header.header.header--main
+        .header__inner   
+          //- h1.heading.heading--main О доме
+          nav.nav.nav--inline
+            ul.nav__list
+              li.nav__item.nav__item--active
+                a(href="about-architect.html").nav__link Архитектура
+              li.nav__item
+                a(href="about-quality.html").nav__link Качество жизни
+              li.nav__item
+                a(href="about-location.html").nav__link Расположение
+              
+              li.nav__item.nav__item--divider
+                .heading.heading--main В центре жизни
+              
+              li.nav__item
+                a(href="about-docs.html").nav__link Документы
+              li.nav__item
+                a(href="about-building.html").nav__link Ход строительства
+              li.nav__item
+                a(href="about-news.html").nav__link Новости
+      section.section.section--cards
+        article.card.card--full.card--left
+          .card__image-container
+            img(src="./assets/img/architect-1.jpg" alt="").card__image
+          .card__inner.card__inner--left
+            h3.card__title Изысканная архитектура
+            p.card__text Геральдика, аристократизм, стать – тона, которыми окрашена история жизни в «Женеве». Они ненавязчиво отражаются в мельчайших деталях экстерьера, создавая ансамбль истинно европейского стиля. 
+    
+        article.card.card--full
+          .card__image-container
+            img(src="./assets/img/architect-2.jpg" alt="").card__image
+          .card__inner.card__inner--left
+            h3.card__title Стиль в каждой линии
+            p.card__text Комбинация дизайнерских решений в каждой линии фасада: сочетая в себе выдержанную четкость линий и лаконичность цвета, «Женева» приковывает к себе взгляды. И делает это вполне заслужено.
+    
+        article.card.card--full.card--left
+          .card__image-container
+            img(src="./assets/img/architect-3.jpg" alt="").card__image
+          .card__inner.card__inner--left
+            h3.card__title Увеличенные окна
+            p.card__text Смотрите на мир широко открытыми окнами. 2,5 * 1,7 метра — не окна, а картина, которой вы любуетесь каждое утро, заваривая ароматный кофе. Полотно, где ночью расцветают звезды.
+            p.card__text Больше света, больше зелени, больше мира — окна «Женевы» открывают больше возможностей увидеть красоту вокруг.
+  
+    //- Footer
+    include includes/_footer
+    //- Footer End

@@ -1,0 +1,211 @@
+//// Buttons
+// Variables
+$default-color: $white;
+$grey-color: $grey;
+$base-color: $black;
+$active-color: $accent;
+
+.btn {
+  // Modifiers
+  @include variant(invert) {
+    background-color: $active-color;
+    border          : 0;
+    display         : block;
+    white-space     : nowrap;
+
+    .icon {
+      fill: $default-color;
+    }
+    // Hover
+    &:hover {
+      background-color: $active-color;
+      border          : 0;
+    }
+  };
+  @include variant(base) {
+    color           : $default-color;
+    border          : 0;
+    background-color: $grey-color;
+    padding         : 16px 46px;
+    line-height     : 2;
+
+    > .icon {
+      fill: $default-color;
+    }
+    // Hover
+    &:hover {
+      background-color: $active-color;
+      border-color    : $active-color;
+      color           : $white;
+
+      > .icon {
+        fill: $white;
+      }
+    }
+  };
+  @include variant(dashed) {
+    color           : $black;
+    border          : 1px dashed $grey-color;
+    padding         : 21px 60px;
+    background-color: transparent;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .color {
+      color    : $active-color;
+      font-size: 20px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    span {
+      line-height: 13px;
+    }
+
+    > .icon {
+      fill: $active-color;
+    }
+    // Hover
+    &:hover {
+      background-color: $active-color;
+      border-color    : $active-color;
+      color           : $white;
+
+      .color {
+        color: $white;
+      }
+
+      > .icon {
+        fill: $white;
+      }
+    }
+  };
+  @include variant(transparent) {
+    color           : $default-color;
+    border          : 1px solid $default-color;
+    padding         : 21px 60px;
+    background-color: transparent;
+
+    .color {
+      color    : $active-color;
+      font-size: 18px;
+    }
+
+    > .icon {
+      fill: $active-color;
+    }
+    // Hover
+    &:hover {
+      background-color: $active-color;
+      border-color    : $active-color;
+      color           : $white;
+
+      .color {
+        color: $white;
+      }
+
+      > .icon {
+        fill: $white;
+      }
+    }
+  };
+  @include variant(call-back) {
+    background-color: transparent;
+    border          : none;
+    display         : none;
+    white-space     : nowrap;
+    color           : $grey-color;
+    padding         : 0;
+    width           : 100%;
+    text-align      : right;
+    margin-top      : 10px;
+
+    .address & {
+      text-align: right;
+    }
+
+    .icon {
+      fill: $grey-color;
+    }
+
+    &:hover {
+      background-color: transparent !important;
+      color           : $active-color;
+
+      .icon {
+        fill: $default-color;
+      }
+    }
+
+    @media (min-width: 960px) {
+      display: block;
+    }
+
+    .sticky & {
+      display: none;
+    }
+  }
+  @include variant(more) {
+    @include circle-link-hover();
+    padding         : 0;
+    position        : absolute;
+    background-color: #505050;
+    line-height     : 60px;
+    border          : none;
+    right           : 40px;
+    bottom          : -60px;
+    transition      : all 0.6s ease;
+
+    > .icon {
+      position: relative;
+      fill    : $default-color;
+    }
+  };
+
+  @include variant(nav-toggle) {
+    padding: 30px 0 0;
+    border: 0;
+    width: 80px;
+    height: 80px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: -40px;
+    left: 50%;
+    margin-left: -40px;
+    z-index: 5;
+    background-color: #505050;
+    border-radius: 50%;
+
+    svg {
+      width: 20px;
+      height: 14px;
+    }
+
+    path {
+      fill: $white;
+    }
+  };
+  // Style
+  background-color: transparent;
+  border          : 1px solid $default-color;
+  color           : $default-color;
+  display         : inline-block;
+  font-size       : 14px;
+  font-weight     : 500;
+  outline         : 0;
+  padding         : 23px 60px;
+  text-decoration : none;
+  text-transform  : uppercase;
+  // Hover
+  &:hover {
+    background-color: $active-color;
+    border-color    : $active-color;
+  }
+}

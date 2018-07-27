@@ -1,0 +1,9 @@
+Камера для сайта Женевы –
+
+Html Флэш
+<iframe src="https://ipeye.ru/ipeye_service/api/api.php?dev=84a62738ddd242ae9c5559147b0abcd4&tupe=rtmp&autoplay=0&logo=1" width="800" height="600" frameBorder="0" seamless="seamless">Ваш браузер не поддерживает фреймы!</iframe>
+
+ 
+
+Html5
+<iframe src="https://ipeye.ru/ipeye_service/api/iframe.php?iframe_player=1&dev=84a62738ddd242ae9c5559147b0abcd4&autoplay=0" width="800" height="600" frameBorder="0" seamless="seamless" allowfullscreen>Ваш браузер не поддерживает фреймы!</iframe>

@@ -1,0 +1,81 @@
+extends ./views/_layout.pug
+block vars
+  - var pageTitle = 'Contacts'
+  - var bodyClass = 'contacts'
+
+block content
+  .page
+    //- Top Panel
+    include includes/_top-panel
+    //- Top Panel End
+    main.content#js-top
+      header.header.header--main
+        .header__inner   
+          h1.heading.heading--single Контакты
+      .contacts.contacts--page
+        .block
+          a(href="tel:+73432885300").link.link--phone +7 (343) 288 53 00
+          
+          #ex1.modal
+            a(href='#' rel='modal:close').modal__close Close
+            .btn__lines
+            .btn__bg
+            .modal__header
+              h4.modal__title Обратная связь
+            .modal__inner
+              form.form#contactForm(action="" method="get")
+                  .form__block
+                    .input
+                      input#input-name.input__field(type="text", name="name", required="required")
+                      label(for="input-name").input__label Представьтесь, пожалуйста
+                  .form__block
+                    .input
+                      input#input-phone.input__field.input__field--phone(type="tel", name="phone", required="required")
+                      label(for="input-phone").input__label Ваш телефон
+                  
+                  .form__block.form__block--full
+                    p.text
+                      | Нажимая на кнопку, вы соглашаетесь&nbsp;с
+                      a(href='#') &nbsp;правилами&ensp;
+                      | обработки персональных данных
+                
+                  .form__block.form__block--full
+                    button(type='submit' form='contactForm' value='Submit').btn.btn--base
+                      svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 347.53 347.54').icon.icon--phone
+                        g
+                          path(d='M292.28,217.41c-12.56-12.4-28.24-12.4-40.72,0-9.52,9.44-19,18.88-28.4,28.48-2.56,2.64-4.72,3.2-7.84,1.44-6.16-3.36-12.72-6.08-18.64-9.76-27.6-17.36-50.72-39.68-71.2-64.8-10.16-12.48-19.2-25.84-25.52-40.88-1.28-3-1-5,1.44-7.52,9.52-9.2,18.8-18.64,28.16-28.08,13-13.12,13-28.48-.08-41.68-7.44-7.52-14.88-14.88-22.32-22.4-7.68-7.68-15.28-15.44-23-23C71.56-3.07,55.88-3.07,43.4,9.25c-9.6,9.44-18.8,19.12-28.56,28.4-9,8.56-13.6,19-14.56,31.28-1.52,19.92,3.36,38.72,10.24,57C24.6,163.89,46,197.57,72,228.45c35.12,41.76,77,74.8,126.08,98.64,22.08,10.72,45,19,69.84,20.32,17.12,1,32-3.36,43.92-16.72,8.16-9.12,17.36-17.44,26-26.16,12.8-13,12.88-28.64.16-41.44q-22.8-22.92-45.76-45.68Zm0,0')
+                      | Позвоните мне
+                    //- input(type="submit" value="Call me").btn.btn--base
+          
+          a(name="btn-call-back" href='#ex1' rel='modal:open').btn.btn--dashed
+            svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 347.53 347.54').icon.icon--phone
+              g
+                path(d='M292.28,217.41c-12.56-12.4-28.24-12.4-40.72,0-9.52,9.44-19,18.88-28.4,28.48-2.56,2.64-4.72,3.2-7.84,1.44-6.16-3.36-12.72-6.08-18.64-9.76-27.6-17.36-50.72-39.68-71.2-64.8-10.16-12.48-19.2-25.84-25.52-40.88-1.28-3-1-5,1.44-7.52,9.52-9.2,18.8-18.64,28.16-28.08,13-13.12,13-28.48-.08-41.68-7.44-7.52-14.88-14.88-22.32-22.4-7.68-7.68-15.28-15.44-23-23C71.56-3.07,55.88-3.07,43.4,9.25c-9.6,9.44-18.8,19.12-28.56,28.4-9,8.56-13.6,19-14.56,31.28-1.52,19.92,3.36,38.72,10.24,57C24.6,163.89,46,197.57,72,228.45c35.12,41.76,77,74.8,126.08,98.64,22.08,10.72,45,19,69.84,20.32,17.12,1,32-3.36,43.92-16.72,8.16-9.12,17.36-17.44,26-26.16,12.8-13,12.88-28.64.16-41.44q-22.8-22.92-45.76-45.68Zm0,0')
+            | Позвоните мне
+        .block
+          //- Address
+          .contacts.contacts--office
+            h2.heading.heading--contacts Офис продаж:
+            address.address
+              | г.Екатеринбург, ул. Ясная, 2,
+              br
+              | оф. 503 (ТРЦ «Фан Фан»)
+          //- Address End
+        .block
+          h2.heading.heading--contacts Сайт застройщика:
+          span
+            a(href="http://dom-t.su/").link.link--underline.text--medium
+              svg(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewbox='0 0 64 64').icon.icon--link
+                g
+                  path(d='M23.44,51.78,20.2,55A7.25,7.25,0,0,1,10,55a7,7,0,0,1,0-10L21.94,33.16c2.47-2.45,7.12-6.06,10.5-2.7A4,4,0,1,0,38,24.83c-5.76-5.71-14.27-4.66-21.68,2.7L4.43,39.35a15,15,0,0,0,0,21.27,15.21,15.21,0,0,0,21.35,0L29,57.4a4,4,0,1,0-5.59-5.62ZM59.56,5.84C53.38-.3,44.73-.63,39,5l-4,4a4,4,0,1,0,5.59,5.63l4-4c3-2.95,6.85-1.72,9.38.79a7,7,0,0,1,0,10L41.26,34.09c-5.82,5.77-8.54,3.06-9.71,1.91A4,4,0,1,0,26,41.63a12.52,12.52,0,0,0,8.91,4c3.91,0,8-2,12-5.87L59.57,27.1a15,15,0,0,0,0-21.27Zm0,0' transform='translate(0 -1)')
+              | dom-t.su
+              
+      .map.map--contact
+        .map__container
+          script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A138da0a726e6c987be8e6133f017cbcdd80f71b8417967dc13e071d41530a42e&height=440&lang=ru_RU&scroll=true')
+        .map__container
+          img(src="./assets/img/contacts-ofice.jpg" alt="").image
+
+    //- Footer
+    include includes/_footer
+    //- Footer End

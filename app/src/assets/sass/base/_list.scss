@@ -1,0 +1,78 @@
+//// Lists
+//Variables
+$margin-base: $margin;
+$pl: 53px;
+
+ol,
+ul {
+  margin : 0;
+  padding: 0;
+}
+
+.list {
+  @include variant(docs) {
+    margin: 60px 150px;
+
+    .list__item {
+      flex-basis: 100%;
+      padding   : 0;
+      text-align: left;
+
+      // @media (max-width: 599px) {
+      //
+      // }
+
+      @media (min-width: 600px) {
+        flex-basis: 50%;
+      }
+
+      @media (min-width: 900px) {
+        flex-basis: 50%;
+      }
+
+      @media (min-width: 1200px) {
+        flex-basis: 30%;
+      }
+
+      @media (min-width: 1600px) {
+        flex-basis: 25%;
+      }
+
+      @media (min-width: 1800px) {
+        flex-basis: 20%;
+      }
+
+      .link {
+        display: block;
+        margin : 0 40px 0 60px;
+      }
+    }
+  };
+  display        : flex;
+  flex-wrap      : wrap;
+  list-style-type: none;
+  @include has(item) {
+    @include variant(pdf) {
+      padding-left: $pl;
+      position    : relative;
+      // Before
+      &:before {
+        background-image   : url('./../img/icon-pdf.png');
+        background-position: center;
+        content            : '';
+        display            : block;
+        height             : 40px;
+        left               : 0;
+        position           : absolute;
+        top                : 0;
+        width              : 38px;
+      }
+    };
+    margin-bottom: $margin-base;
+  };
+  @include has(text) {
+    display      : inline-block;
+    font-weight  : 500;
+    margin-bottom: 6px;
+  };
+}

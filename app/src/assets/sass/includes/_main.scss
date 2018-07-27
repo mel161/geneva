@@ -1,0 +1,13 @@
+.main-content {
+  p {
+    margin: 0 0 20px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  section + section {
+    margin-top: $margin;
+  }
+}

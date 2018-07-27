@@ -1,0 +1,71 @@
+//// Logo
+// Variables
+$margin-base: $margin;
+$margin-large: 60px;
+
+.logo {
+  // Elements
+  @include has(link) {
+    display: block;
+
+    &:hover {
+      .logo-3,
+      .logo-h-4,
+      .logo-f-4 {
+        fill: $accent;
+      }
+
+      .logo-h-5,
+      .logo-f-5 {
+        fill: $white;
+      }
+    }
+  };
+  @include has(image) {
+    transition     : all 0.3s ease;
+    height: 30px;
+    width : 84px;
+
+    @media (min-width: 960px) {
+      height: 64px;
+      width : 180px;
+
+      .sticky & {
+        width: 113.5px;
+        margin-right: 66.5px;
+        .logo-h-1 {
+          display: none;
+        }
+      }
+    }
+  };
+  @include variant(hero) {
+    .logo__image {
+      height: 160px;
+      width : 114px;
+    }
+    left       : 50%;
+    margin-left: -57px;
+    position   : absolute;
+    top        : 60px;
+    z-index    : 2;
+  };
+  @include variant(footer) {
+    margin-right: 0;
+
+    @media (min-width: 960px) {
+      margin-right: 80px;
+    }
+
+    .logo__image {
+      width: 168px;
+      height: 60px;
+      margin: 0;
+    }
+  };
+  // Style
+  align-items    : center;
+  display        : flex;
+  justify-content: center;
+  margin         : 0;
+}

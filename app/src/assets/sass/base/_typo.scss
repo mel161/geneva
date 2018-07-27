@@ -1,0 +1,80 @@
+//// Typography
+// Body Styles
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family           : $font-sans;
+  font-size             : 16px;
+  font-weight           : 300;
+  line-height           : 1.2;
+  text-rendering        : optimizeLegibility;
+  // Selection
+  *::-moz-selection {
+    background-color: rgba($accent, 0.3);
+    text-shadow     : none;
+  }
+  //
+  *::selection {
+    background-color: rgba($accent, 0.3);
+    text-shadow     : none;
+  }
+}
+// Base Elements Styles
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-weight: 500;
+//   margin     : 0;
+//   padding    : 0;
+// }
+
+strong {
+  font-weight: 500;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+.copyright {
+  font-size  : 16px;
+  color      : $grey;
+  line-height: 1.2;
+}
+// Text
+.text {
+  @include variant(extrasmall) {
+    font-size: 10px;
+  }
+  @include variant(small) {
+    font-size: 14px;
+  }
+  @include variant(medium) {
+    font-size: 16px;
+  };
+  @include variant(large) {
+    font-size  : 20px;
+    color      : $black;
+    line-height: 1.2;
+    text-align : left;
+    margin: 0;
+  };
+  @include variant(extralarge) {
+    font-size: 72px;
+    font-weight: 500;
+  };
+  @include variant(mutted) {
+    color: $grey-m;
+  };
+  @include variant(date) {
+    margin-bottom: 60px;
+    display: block;
+  };
+}

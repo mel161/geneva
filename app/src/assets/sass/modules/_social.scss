@@ -1,0 +1,85 @@
+//// Social
+// Variables
+$base-color: $grey;
+$hover-color: $accent;
+$link-size: 60px;
+$margin-big: 30px;
+$margin-small: 20px;
+
+.social {
+  // Elements
+  @include has(list) {
+    display        : flex;
+    list-style-type: none;
+  };
+  @include has(item) {
+    margin-right: $margin-small;
+    position    : relative;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  };
+  @include has(link) {
+    @include circle-link-hover();
+    align-items     : center;
+    border          : 1px dashed $base-color;
+    border-radius   : $link-size;
+    background-color: $base-color;
+    color           : $base-color;
+    display         : block;
+    display         : flex;
+    height          : $link-size;
+    justify-content : center;
+    position        : relative;
+    width           : $link-size;
+    transition      : all 0.3s ease;
+    background-color: $nblack;
+    z-index         : 2;
+
+    .btn__bg {
+      background-color: #141414;
+    }
+
+    &:hover {
+      border          : 1px solid $hover-color;
+      background-color: $hover-color;
+
+      > .social__image {
+        fill: $white;
+
+        path {
+          fill      : $white;
+          transition: 0.25s ease-in-out 0s;
+        }
+      }
+    }
+  };
+  @include has(image) {
+    // Modifiers
+    @include variant(vk) {
+      height: 13px;
+      width : 23px;
+    };
+    @include variant(insta) {
+      height: 18px;
+      width : 18px;
+    };
+    @include variant(fb) {
+      height: 20px;
+      width : 10px;
+    };
+  };
+  //  Style
+  fill         : $base-color;
+  margin-bottom: $margin-big;
+
+  path {
+    fill      : $base-color;
+    transition: 0.5s ease-in-out 0.5s;
+  }
+
+  .footer & {
+    margin: 0;
+  }
+}

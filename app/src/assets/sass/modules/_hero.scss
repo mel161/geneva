@@ -1,0 +1,87 @@
+// Hero Block
+$padding: $margin * 2;
+$margin-base: $margin;
+$margin-large: 60px;
+$title-font-size: 72px;
+$title-color: $white;
+
+.hero {
+  // Elements
+  @include has(inner) {
+    padding   : 0;
+    z-index   : 2;
+    text-align: center;
+    margin-bottom: $margin-large;
+
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  };
+  @include has(title) {
+    color        : $title-color;
+    font-size    : $title-font-size;
+    font-weight  : 300;
+    margin-bottom: $margin-base;
+    text-transform: uppercase;
+  };
+  // Styles
+  overflow: hidden;
+  position: relative;
+  display: flex;
+
+}
+
+.zoominhero {
+  height             : 100%;
+  width              : 100%;
+  position           : absolute;
+  top                : 0;
+  left               : 0;
+  background-image   : url('./../img/hero-bg-1.jpg');
+  background-position: center;
+  background-repeat  : no-repeat;
+  background-size    : cover;
+  -webkit-user-select: none;
+  -moz-user-select   : none;
+  -ms-user-select    : none;
+  -webkit-animation  : zoomin 10s ease-in infinite;
+  animation          : zoomin 10s ease-in infinite;
+  transition         : all 0.5s ease-in-out;
+  overflow           : hidden;
+}
+.zoomouthero {
+  background       : none;
+  -webkit-animation: zoomout 10s ease-in infinite;
+  animation        : zoomout 10s ease-in infinite;
+  transition       : all 0.5s ease-in-out;
+  overflow         : hidden;
+}
+/* Zoom in Keyframes */
+@-webkit-keyframes zoomin {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes zoomin {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+/*End of Zoom in Keyframes */

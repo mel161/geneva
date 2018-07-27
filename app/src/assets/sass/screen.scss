@@ -1,0 +1,77 @@
+// General imports
+@import 'normalize/import-now';
+@import 'node_modules/photoswipe/src/css/main.scss';
+
+$pswp__assets-path:'../img/';
+@import 'node_modules/photoswipe/src/css/default-skin/default-skin.scss';
+
+// @import 'breakpoint';
+//
+// Fonts
+@import 'fonts';
+//// Global Variables
+// Colors
+$black: #000;
+$white: #fff;
+
+//Greys
+$grey: #909090;
+$grey-m: #8c8c8c;
+$grey-light: #e6e6e6;
+$grey-light-1: #d2d2d2;
+$grey-d: #292929;
+
+//Theme
+$nwhite: #f0f0f0;
+$nblack: #141414;
+$accent: #e65c00;
+// Fonts
+$font-sans: 'Museo Sans', sans-serif;
+// Margins
+$margin: 40px;
+
+// Mixin
+@import "mixin";
+//
+//// Base Styles
+// Base Page Styles
+@import 'base/body';
+// Base Typography Styles
+@import 'base/typo';
+//
+//// Base Elements
+// Base links
+@import 'base/link';
+// Base Lists
+@import 'base/list';
+// Base Headers
+@import 'base/headers';
+// Base Images
+@import 'base/images';
+// Base Buttons
+@import 'base/btn';
+// Base Tables
+@import 'base/btn';
+// Base Forms Elements
+@import 'base/form';
+// Base Tables
+@import 'base/tables';
+//
+//// Necessarily Page Elements
+@import 'includes/header';
+@import 'includes/main';
+@import 'includes/footer';
+@import 'includes/section';
+@import 'includes/content';
+//
+//// Components
+//
+@import 'modules/logo';
+@import 'modules/hero';
+@import 'modules/nav';
+@import 'modules/social';
+@import 'modules/map';
+@import 'modules/card';
+@import 'modules/slider';
+@import 'modules/address';
+@import 'modules/modal';

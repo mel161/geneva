@@ -1,0 +1,84 @@
+extends ./views/_layout.pug
+block vars
+  - var pageTitle = 'About Location'
+  - var bodyClass = 'about'
+
+block content
+  .page
+    //- Top Panel
+    include includes/_top-panel
+    //- Top Panel End
+    main.content#js-top
+      header.header.header--main
+        .header__inner   
+          //- h1.heading.heading--main О доме
+          nav.nav.nav--inline
+            ul.nav__list
+              li.nav__item
+                a(href="about-architect.html").nav__link Архитектура
+              li.nav__item.nav__item--active
+                a(href="about-quality.html").nav__link Качество жизни
+              li.nav__item
+                a(href="about-location.html").nav__link Расположение
+              
+              li.nav__item.nav__item--divider
+                .heading.heading--main В центре жизни
+              
+              li.nav__item
+                a(href="about-docs.html").nav__link Документы
+              li.nav__item
+                a(href="about-building.html").nav__link Ход строительства
+              li.nav__item
+                a(href="about-news.html").nav__link Новости
+      section.section.section--cards
+        article.card.card--full
+          .card__image-container
+            img(src="./assets/img/quality-1.jpg" alt="").card__image
+          .card__inner.card__inner--left
+            h3.card__title Просторные холлы
+            p.card__text Присядьте на диван в уютном лобби. Отдохните, наблюдая за тем, как в камине потрескивают дрова. Не забудьте переключиться на бесплатный Wi-Fi. Наслаждайтесь мгновениями комфорта каждый день.
+    
+        article.card.card--full.card--left
+          .card__image-container
+            img(src="./assets/img/quality-2.jpg" alt="").card__image
+          .card__inner.card__inner--left
+            h3.card__title Благоустроенный двор
+            p.card__text Выдался напряженный день? Поле для баскетбола и волейбола – отличное место, чтобы развеяться и выкинуть из головы все пресные мысли. А на воркаут-площадке, окруженной зеленым массивом деревьев, в норму придут и мышцы, и настроение.
+            p.card__text Малышам «Женевы» тоже не придётся скучать – огромная детская площадка откроет им мир удивительных приключений.
+    
+        article.card.card--full
+          .card__image-container
+            img(src="./assets/img/quality-3.jpg" alt="").card__image
+          .card__inner.card__inner--left
+            h3.card__title Вода высшего качества — для здоровой жизни
+            p.card__text Для того, чтобы увидеть лазурную воду лесного озера Блаузее, не нужно покупать билеты в Швейцарию. Достаточно открыть кран, наполнив ванную чистой голубой водой.
+            p.card__text О качестве позаботится установка Акварос-5. Вода очищается от вредных соединений и тяжелых металлов, не оказывает губительного воздействия на кожу, а наоборот заботится о ней. 
+  
+        article.card.card--full.card--left
+          .card__image-container
+            img(src="./assets/img/quality-4.jpg" alt="").card__image
+          .card__inner.card__inner--left
+            h3.card__title Воздух, как в Женеве — в «Женеве»
+            p.card__text 
+              | Доверьте очистку воздуха мастерам — AIR MASTER Ballu. 6-ступенчатая система очистки, установленная в квартире, позаботится о том, чтобы воздух был чистый и нагретый до оптимальной температуры.
+            p.card__text 
+              | AIR MASTER создаст ваш индивидуальный микроклимат — вашу маленькую Женеву.
+  
+        article.card.card--full
+          .card__image-container
+            img(src="./assets/img/quality-5.jpg" alt="").card__image
+          .card__inner.card__inner--left
+            h3.card__title Жить комфортно — жить в безопасности
+            p.card__text Как и в Швейцарии, в «Женеве» все под безупречной защитой. Территория дома, холлы и лифты снабжены камерами видеонаблюдения, работающими 24/7.
+            p.card__text Видеодомофоны помогут узнать, кто пришёл к вам в гости, а бдительная охрана не пропустит незнакомцев в «Женеву». Можно гулять допоздна и без опаски отпускать детей во двор.
+  
+        article.card.card--full.card--left
+          .card__image-container
+            img(src="./assets/img/quality-6.jpg" alt="").card__image
+          .card__inner.card__inner--left
+            h3.card__title На шаг впереди — технологии в основе вашего комфорта
+            p.card__text Познакомьтесь со своим галантным дворецким — домом «Женева». Дом запомнит вас и сам откроет вам двери. Система бесконтактного входа автоматически считает брелок — его даже не нужно доставать из сумки. 
+    
+    //- Footer
+    include includes/_footer
+    //- Footer End

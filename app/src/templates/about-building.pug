@@ -1,0 +1,43 @@
+extends ./views/_layout.pug
+block vars
+  - var pageTitle = 'About Location'
+  - var bodyClass = 'about'
+
+block content
+  .page
+    //- Top Panel
+    include includes/_top-panel
+    //- Top Panel End
+    main.content#js-top
+      header.header.header--main
+        .header__inner   
+          nav.nav.nav--inline
+            ul.nav__list
+              li.nav__item
+                a(href="about-architect.html").nav__link Архитектура
+              li.nav__item
+                a(href="about-quality.html").nav__link Качество жизни
+              li.nav__item
+                a(href="about-location.html").nav__link Расположение
+              
+              li.nav__item.nav__item--divider
+                .heading.heading--main В центре жизни
+              
+              li.nav__item
+                a(href="about-docs.html").nav__link Документы
+              li.nav__item.nav__item--active
+                a(href="about-building.html").nav__link Ход строительства
+              li.nav__item
+                a(href="about-news.html").nav__link Новости
+      section.section.section--horizontal
+        .container
+          .section__header
+            .section__text.text--extralarge 20%
+          .section__inner.section__inner--center
+            p.section__text До конца июня наши рабочие  успели выполнить самый трудоемкий и важный объем работ:  обустроили стройплощадку, вырыли котлован, вывезли грунт, заложили арматуру и отлили фундаментную плиту. 
+      .video-container
+        iframe(src='https://ipeye.ru/ipeye_service/api/iframe.php?iframe_player=1&dev=84a62738ddd242ae9c5559147b0abcd4&autoplay=0' width='976' height='556' frameborder='0' seamless='seamless' allowfullscreen='') Ваш браузер не поддерживает фреймы!
+      
+    //- Footer
+    include includes/_footer
+    //- Footer End

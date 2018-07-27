@@ -1,0 +1,72 @@
+.address {
+  // Elements
+  // @include has(title) {
+  //   margin-bottom: 30px;
+  // };
+  // @include has(text) {};
+  // @include variant(contact) {
+  //   display        : flex;
+  //   flex-direction : row;
+  //   width          : 100%;
+  //   justify-content: center;
+  //   align-items    : baseline;
+  //   padding        : 60px 0;
+  //   text-align     : left;
+  //
+  //   .block {
+  //     display       : flex;
+  //     flex-direction: column;
+  //     margin-right  : 90px;
+  //
+  //     &:last-of-type {
+  //       margin-right: 0;
+  //     }
+  //   }
+  //
+  //   .link {
+  //     color  : $black;
+  //     display: inline-block;
+  //
+  //     &.link--phone {
+  //       margin: 0 0 22px;
+  //     }
+  //   }
+  // };
+  // Styles
+  color      : $grey;
+  font-size  : 14px;
+  line-height: 1.2;
+}
+
+.contacts {
+  // Elements
+  // @include has() {};
+  // Modifiers
+  @include variant(office) {
+    h4.heading {
+      font-size  : 20px;
+      line-height: 1.2;
+      margin     : 0 0 10px;
+      font-weight: 300;
+    }
+  };
+
+  @include variant(top) {
+    text-align: right;
+  };
+
+  @include variant(page) {
+    width: 880px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: row;
+
+    .block {
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-between;
+      align-items: baseline;
+    }
+  };
+  // Styles
+}

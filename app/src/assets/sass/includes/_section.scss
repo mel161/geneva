@@ -1,0 +1,87 @@
+//// Section
+// Variables
+$margin-small: $margin / 2;
+$margin-base: $margin;
+$margin-large: 60px;
+$base-font-size: 20px;
+
+.section {
+  // Elements
+  @include has(header) {};
+  @include has(inner) {
+    @include variant(center) {
+      display        : flex;
+      justify-content: center;
+      align-items    : center;
+    };
+  };
+  @include has(title) {
+    font-size     : $base-font-size;
+    text-transform: none;
+    text-align    : left;
+    font-weight   : 500;
+  };
+  @include has(text) {
+    margin: 0 0 20px;
+  };
+  @include variant(horizontal) {
+    display   : flex;
+    flex-basis: 100%;
+    margin-top: 45px;
+
+    .section__header {
+      flex-grow   : 1;
+      margin-right: 0;
+
+      .section__title {
+        margin-right: 40px;
+      }
+
+      .section__text {
+        margin    : 0 200px 0 0;
+        text-align: left;
+      }
+    }
+
+    .section__inner {
+      flex-grow : 2;
+      text-align: left;
+      width     : 100%;
+      margin-top: 11px;
+    }
+  };
+  @include variant(home) {
+    .section__inner {
+      display       : flex;
+      flex-direction: row;
+      flex-wrap     : wrap;
+      padding       : 20px;
+      text-align    : center;
+    }
+  };
+  @include variant(news) {
+    display        : flex;
+    flex-wrap      : wrap;
+    margin         : 60px 0 90px;
+    justify-content: center;
+
+    > .card {
+      flex-basis: calc(100% / 5);
+      margin    : 0 $margin-small $margin-small 0;
+      max-width : 300px;
+    }
+
+    .btn {
+      margin: 28px auto 0;
+      width : 300px;
+    }
+  };
+  @include variant(cards) {
+    margin: 0;
+  };
+
+  @include variant(gallery) {
+    margin-bottom: 30px;
+  };
+  // Styles
+}
