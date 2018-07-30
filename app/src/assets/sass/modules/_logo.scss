@@ -55,6 +55,10 @@ $margin-large: 60px;
     top        : 100px;
     z-index    : 2;
 
+    @media (orientation: landscape) {
+      top: 20px;
+    }
+
     @media (min-width: 960px) {
       margin-left: -57px;
       top: 60px;

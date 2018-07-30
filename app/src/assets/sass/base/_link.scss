@@ -77,6 +77,41 @@
       }
     }
   };
+
+  @include variant(to-top) {
+    @include circle-link-hover();
+    align-items     : center;
+    background-color: #505050;
+    display         : block;
+    display         : flex;
+    justify-content : center;
+    left            : 50%;
+    margin          : 0 0 0 -40px;
+    position        : fixed;
+    bottom          : -40px;
+    z-index         : 2;
+    width           : 80px;
+    height          : 80px;
+    border-radius   : 50%;
+
+    svg {
+      margin-top: -30px;
+
+      path {
+        fill: #909090;
+      }
+    }
+
+    .btn__bg,
+    .btn__lines {
+      display: none;
+    }
+
+    .sticky & {
+      z-index: 11;
+    }
+  }
+
   @include variant(back) {
     clear         : both;
     color         : $grey-m;

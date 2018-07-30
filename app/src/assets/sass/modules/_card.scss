@@ -219,8 +219,36 @@
   margin-bottom    : 20px;
   margin-right     : 0;
   overflow         : hidden;
+  width: 100%;
   min-width: 280px;
   @include aspect-ratio(1, 1);
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .section--home &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (orientation: landscape) {
+    @include aspect-ratio(3, 1);
+    margin-right: 0;
+
+    .section--home &:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: 640px) and (orientation: landscape) {
+    max-width: 280px;
+    margin-right: 20px;
+    @include aspect-ratio(1, 1);
+
+    .section--home &:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
 
 
   @media (min-width: 960px) {
@@ -229,14 +257,6 @@
     display          : flex;
     // flex-basis       : calc(50% - 10px);
     justify-content  : center;
-  }
-
-  &:nth-child(2n) {
-    margin-right: 0;
-  }
-
-  .section--home &:last-of-type {
-    margin-bottom: 0;
   }
 
   .section--gallery & {

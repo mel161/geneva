@@ -57,6 +57,11 @@ $base-font-size: 20px;
       flex-wrap     : wrap;
       padding       : 20px 20px 70px;
       text-align    : center;
+
+      @media (min-width: 640px) and (orientation: landscape) {
+        width: 580px;
+        margin: 0 auto;
+      }
     }
   };
   @include variant(news) {
