@@ -41,14 +41,24 @@ $margin-large: 60px;
   };
   @include variant(hero) {
     .logo__image {
-      height: 160px;
-      width : 114px;
+      height: 120px;
+      width : 86px;
+
+      @media (min-width: 960px) {
+        height: 160px;
+        width : 114px;
+      };
     }
     left       : 50%;
-    margin-left: -57px;
+    margin-left: -43px;
     position   : absolute;
-    top        : 60px;
+    top        : 100px;
     z-index    : 2;
+
+    @media (min-width: 960px) {
+      margin-left: -57px;
+      top: 60px;
+    };
   };
   @include variant(footer) {
     @include clearfix;

@@ -33,11 +33,14 @@ $title-color: $white;
   // Modifiers
   @include variant(hero) {
     color         : $title-color;
-    font-size     : $title-font-size;
+    font-size     : 36px;
     font-weight   : 300;
-    line-height   : 1;
-    margin-bottom : $margin-large;
+    line-height   : 42px;
+    margin        : 20px 0 32px;
     text-transform: uppercase;
+    @media (min-width: 960px) {
+      font-size: $title-font-size;
+    }
   };
   @include variant(hide) {
     text-indent: -9999px;
@@ -49,11 +52,25 @@ $title-color: $white;
   };
   @include variant(card) {
     color         : $title-color;
-    font-size     : 32px;
+    font-size     : 20px;
     font-weight   : 300;
     line-height   : 1.2;
     text-align    : left;
     text-transform: none !important;
+
+    &:after {
+      display: inline-block;
+      content: '';
+      position: relative;
+      background-image: url('../img/arrow.svg');
+      width: 7px;
+      height: 12px;
+      margin-left: 10px;
+    }
+
+    @media (min-width: 960px) {
+      font-size: 32px;
+    }
   };
   @include variant(main) {
     font-size     : 40px;
@@ -63,8 +80,7 @@ $title-color: $white;
     margin-bottom : $margin-base;
     font-weight   : 300;
     margin        : 0;
-    text-align: center;
-
+    text-align    : center;
     // width: 350px;
     // position: absolute;
     // left: 50%;
@@ -79,7 +95,7 @@ $title-color: $white;
     text-align    : center;
     font-weight   : 300;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom : 20px;
   };
   @include variant(contacts) {
     font-size     : 20px;
@@ -92,7 +108,7 @@ $title-color: $white;
     line-height   : 1.2;
     text-transform: none;
     margin-bottom : 30px;
-    color: $white;
+    color         : $white;
   };
   // Styles
   text-transform: uppercase;

@@ -3,16 +3,27 @@
 .card {
   // Elements
   @include has(inner) {
-    bottom         : 0;
     display        : flex;
     flex-direction : column;
-    height         : 380px;
-    justify-content: flex-end;
-    padding        : 60px 46px;
-    position       : relative;
+    height         : auto;
+    justify-content: flex-start;
+    // padding        : 60px 46px;
     transition     : all 0.3s ease;
-    width          : 100%;
+    // width          : 100%;
     z-index        : 1;
+
+    position: absolute;
+    bottom         : 0;
+    left: 0;
+    margin: 20px 60px 20px 20px;
+
+
+    @media (min-width: 960px) {
+      height         : 380px;
+      justify-content: flex-end;
+      bottom         : 0;
+      position       : relative;
+    }
   };
   @include has(image) {
     background-position: center;
@@ -45,6 +56,7 @@
     line-height   : 1.2;
     text-align    : left;
     text-transform: none !important;
+    width: auto;
   };
   // Modifiers
   @include variant(news) {
@@ -203,16 +215,28 @@
   align-items      : center;
   background-repeat: no-repeat;
   background-size  : cover;
-  display          : flex;
-  flex-basis       : calc(50% - 10px);
-  justify-content  : center;
+
   margin-bottom    : 20px;
-  margin-right     : 20px;
+  margin-right     : 0;
   overflow         : hidden;
-  position         : relative;
+  min-width: 280px;
+  @include aspect-ratio(1, 1);
+
+
+  @media (min-width: 960px) {
+    flex-basis       : calc(50% - 10px);
+    margin-right     : 20px;
+    display          : flex;
+    // flex-basis       : calc(50% - 10px);
+    justify-content  : center;
+  }
 
   &:nth-child(2n) {
     margin-right: 0;
+  }
+
+  .section--home &:last-of-type {
+    margin-bottom: 0;
   }
 
   .section--gallery & {

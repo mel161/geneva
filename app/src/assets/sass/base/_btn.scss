@@ -86,8 +86,12 @@ $active-color: $accent;
   @include variant(transparent) {
     color           : $default-color;
     border          : 1px solid $default-color;
-    padding         : 21px 60px;
+    padding         : 21px 40px;
     background-color: transparent;
+
+    @media (min-width: 960px) {
+      padding         : 21px 60px;
+    }
 
     .color {
       color    : $active-color;
@@ -161,6 +165,14 @@ $active-color: $accent;
     > .icon {
       position: relative;
       fill    : $default-color;
+    }
+
+    .card & {
+      display: none;
+
+      @media (min-width: 960px) {
+        display: block;
+      }
     }
   };
   @include variant(nav-toggle) {
