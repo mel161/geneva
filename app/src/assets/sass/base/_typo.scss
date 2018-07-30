@@ -44,12 +44,16 @@ a {
 }
 
 .copyright {
-  font-size  : 16px;
+  font-size  : 12px;
   color      : $grey;
   line-height: 1.2;
-  margin-top: 20px;
+  margin-top : 37px;
+  text-align : center;
+
+
 }
 // Text
+
 .text {
   @include variant(extrasmall) {
     font-size: 10px;
@@ -65,10 +69,10 @@ a {
     color      : $black;
     line-height: 1.2;
     text-align : left;
-    margin: 0;
+    margin     : 0;
   };
   @include variant(extralarge) {
-    font-size: 72px;
+    font-size  : 72px;
     font-weight: 500;
   };
   @include variant(mutted) {
@@ -76,6 +80,36 @@ a {
   };
   @include variant(date) {
     margin-bottom: 60px;
-    display: block;
+    display      : block;
+  };
+}
+
+.contacts {
+  @include variant(office) {
+    text-align: center;
+  };
+  @include variant(footer) {
+    text-align   : center;
+    margin-bottom: 38px;
+
+    .link--phone {
+      font-size    : 21px;
+      font-weight  : 500;
+      border-bottom: 1px dashed $white;
+      color        : $white;
+    }
+
+    .btn--call-back {
+      display: block;
+      width: auto;
+      margin: 10px auto 0;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      .sticky .footer & {
+        display: block;
+      }
+    }
   };
 }

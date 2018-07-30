@@ -15,6 +15,19 @@ $muted-color: $grey-m;
   // Elements
   @include has(list) {
     list-style-type: none;
+    @include variant(submenu) {
+      margin-top: 16px;
+      display: none;
+      transition: all 0.4s ease;
+
+      .nav__item {}
+
+      .nav__link {}
+
+      .nav__item--current & {
+        display: block;
+      }
+    };
   };
   @include has(item) {
     @include variant(dashed) {
@@ -38,6 +51,7 @@ $muted-color: $grey-m;
         border-color: $active-color;
         color       : $active-color;
       }
+
       &.nav__item--active {
         border: 0;
       };
@@ -48,12 +62,30 @@ $muted-color: $grey-m;
     @include variant(divider) {
       width: 360px;
     };
+    @include variant(current) {
+
+    };
+    @include variant(parent) {
+      .icon {
+        float: right;
+
+        path {
+          fill: $white;
+        }
+      }
+
+      &.nav__item--current {
+        .icon {
+          transform: rotate(-90deg);
+        }
+      };
+    };
     // Style
     margin-bottom: $margin-small;
     color        : $base-color;
 
     &:hover {
-      color: $active-color;
+      color       : $active-color;
       border-color: $active-color;
     }
   };
@@ -70,10 +102,10 @@ $muted-color: $grey-m;
   @include variant(main) {
     // Elements
     .nav__list {
-      display: -webkit-flex;
-      display: -ms-flex;
-      display: flex;
-      flex-direction: row;
+      display        : -webkit-flex;
+      display        : -ms-flex;
+      display        : flex;
+      flex-direction : row;
       justify-content: space-between;
     }
 
@@ -82,123 +114,119 @@ $muted-color: $grey-m;
         color: $active-color;
         // text-shadow: 1px 1px 1px rgba($white, 1);
       };
-      color: $default-color;
-      position: relative;
+      color        : $default-color;
+      position     : relative;
       margin-bottom: 0;
+
       &:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        bottom: 0;
-        left: 0;
-        background-color: $active-color;
-        visibility: hidden;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
+        content           : '';
+        position          : absolute;
+        width             : 100%;
+        height            : 1px;
+        bottom            : 0;
+        left              : 0;
+        background-color  : $active-color;
+        visibility        : hidden;
+        -webkit-transform : scaleX(0);
+        transform         : scaleX(0);
         -webkit-transition: all 0.3s ease-in-out 0s;
-        transition: all 0.3s ease-in-out 0s;
+        transition        : all 0.3s ease-in-out 0s;
       }
 
       &:hover {
         color: $active-color;
 
         &:before {
-          visibility: visible;
+          visibility       : visible;
           -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+          transform        : scaleX(1);
         }
       }
     }
 
     .nav__link {
-      position: relative;
+      position       : relative;
       text-decoration: none;
-      text-transform: uppercase;
-      font-size: 16px;
-      line-height: 1.6;
-      font-weight: 300;
+      text-transform : uppercase;
+      font-size      : 16px;
+      line-height    : 1.6;
+      font-weight    : 300;
     }
     // Style
-    width: 500px;
-    display: none;
-    flex-direction: column;
+    width          : 500px;
+    display        : none;
+    flex-direction : column;
     justify-content: center;
     // align-self: flex-end;
-
     &.nav--visible {
-      display: flex;
-      position: fixed;
-      width: 100%;
-      height: auto;
-      min-height: 100%;
+      display         : flex;
+      position        : fixed;
+      width           : 100%;
+      height          : auto;
+      min-height      : 100%;
       background-color: $black;
-      top: 0;
-      left: 0;
+      top             : 0;
+      left            : 0;
     }
-
-
     @media (min-width: 960px) {
       display: flex;
     }
   };
   //
-
   //
   @include variant(inline) {
-
     .nav__list {
-      display: -webkit-flex;
-      display: -ms-flex;
-      display: flex;
+      display        : -webkit-flex;
+      display        : -ms-flex;
+      display        : flex;
       justify-content: space-between;
-      align-items: center;
-      width: 100%;
+      align-items    : center;
+      width          : 100%;
     }
 
     .nav__item {
       display: inline-flex;
-      margin: 0;
+      margin : 0;
     }
 
     .nav__link {
-      line-height: 16px;
-      font-size: 14px;
+      line-height   : 16px;
+      font-size     : 14px;
       text-transform: uppercase;
     }
     // Style
-    width: 100%;
+    width    : 100%;
     max-width: 1280px;
-    margin: 0 auto;
+    margin   : 0 auto;
   };
   //
-
   @include variant(underline) {
     width: 620px;
 
     .nav__link {
-      line-height: 16px;
-      font-size: 14px;
+      line-height   : 16px;
+      font-size     : 14px;
       text-transform: none;
     }
   };
-
   @include variant(social) {
     .nav__list {
       display: -webkit-flex;
       display: -ms-flex;
       display: flex;
     }
+
     .nav__item {
-      margin: 0 $margin-small 0 0;
-      padding: 0;
-      position    : relative;
-      border: 0;
+      margin  : 0 $margin-small 0 0;
+      padding : 0;
+      position: relative;
+      border  : 0;
 
       &:last-of-type {
         margin-right: 0;
       }
     }
+
     .nav__link {
       @include circle-link-hover();
       align-items     : center;
@@ -234,10 +262,11 @@ $muted-color: $grey-m;
     }
     // Styles
     margin: 0;
+
+    .footer & {
+      margin: 0 auto 32px;
+    }
   };
-
-
-
   @include has(image) {
     // Modifiers
     @include variant(vk) {
@@ -257,31 +286,37 @@ $muted-color: $grey-m;
       fill: $grey-color;
     }
   };
-
   @include variant(footer) {
-    border-top: 1px solid #505050;
-    width: 100%;
+    border-top   : 1px solid #505050;
+    width        : 100%;
+    margin-bottom: 35px;
 
     .nav__item {
-      padding: 20px;
+      padding      : 20px;
       border-bottom: 1px solid #505050;
       margin-bottom: 0;
 
       .nav__item {
-        border: 0;
-        padding: 15px 20px;
+        border : 0;
+        padding: 10px 20px;
+
+        .nav__link {
+          font-size: 14px;
+          color: $grey;
+        }
 
         &:last-of-type {
-          padding-bottom: 0;
+          padding-bottom: 11px;
         }
       }
     }
-    .nav__link {
-      color: $white;
-      line-height: 1;
-      font-size: 16px;
-    }
 
+    .nav__link {
+      color         : $white;
+      line-height   : 1;
+      font-size     : 16px;
+      text-transform: uppercase;
+    }
     @media (min-width: 960px) {
       width: 900px;
 
@@ -291,5 +326,4 @@ $muted-color: $grey-m;
     }
   };
   // Style
-
 }

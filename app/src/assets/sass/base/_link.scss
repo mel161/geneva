@@ -23,6 +23,7 @@
   @include variant(to-top) {
     margin        : 35px 0;
     text-transform: uppercase;
+    display: none;
 
     .main-content & {
       width: 100%;

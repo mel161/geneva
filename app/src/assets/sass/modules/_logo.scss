@@ -51,20 +51,23 @@ $margin-large: 60px;
     z-index    : 2;
   };
   @include variant(footer) {
-    margin: 0 0 40px;
+    @include clearfix;
+    display: block;
+    margin: 0 auto 36px;
 
     @media (min-width: 960px) {
       margin-right: 80px;
     }
 
     .logo__image {
-      width: 168px;
-      height: 60px;
+      width: 195px;
+      height: 70px;
       margin: 0;
 
       @media (min-width: 960px) {
-        width: 195px;
-        height: 70px;
+
+        width: 168px;
+        height: 60px;
       }
     }
   };

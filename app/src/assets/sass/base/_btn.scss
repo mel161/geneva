@@ -48,16 +48,16 @@ $active-color: $accent;
     border          : 1px dashed $grey-color;
     padding         : 21px 60px;
     background-color: transparent;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display         : -webkit-flex;
+    display         : -ms-flex;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
 
     .color {
-      color    : $active-color;
-      font-size: 20px;
-      display: inline-block;
+      color       : $active-color;
+      font-size   : 20px;
+      display     : inline-block;
       margin-right: 10px;
     }
 
@@ -139,7 +139,6 @@ $active-color: $accent;
         fill: $default-color;
       }
     }
-
     @media (min-width: 960px) {
       display: block;
     }
@@ -164,30 +163,77 @@ $active-color: $accent;
       fill    : $default-color;
     }
   };
-
   @include variant(nav-toggle) {
-    padding: 30px 0 0;
-    border: 0;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: -40px;
-    left: 50%;
-    margin-left: -40px;
-    z-index: 10;
+    padding         : 30px 0 0;
+    border          : 0;
+    width           : 80px;
+    height          : 80px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    position        : fixed;
+    top             : -40px;
+    left            : 50%;
+    margin-left     : -40px;
+    z-index         : 10;
     background-color: #505050;
-    border-radius: 50%;
+    border-radius   : 50%;
 
     svg {
-      width: 20px;
-      height: 14px;
+      width : 40px;
+      height: auto;
     }
 
-    path {
-      fill: $white;
+    .svg-menu-toggle {
+      fill          : $white;
+      pointer-events: all; //needs to be there so the hover works
+      cursor        : pointer;
+
+      .bar {
+        -webkit-transform       : rotate(0) translateY(0) translateX(0);
+        transform               : rotate(0) translateY(0) translateX(0);
+        opacity                 : 1;
+        -webkit-transform-origin: 20px 10px;
+        transform-origin        : 20px 10px;
+        -webkit-transition      : -webkit-transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
+        transition              : transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
+      }
+
+      .bar:nth-of-type(1) {
+        -webkit-transform-origin: 20px 10px;
+        transform-origin        : 20px 10px;
+      }
+
+      .bar:nth-of-type(3) {
+        -webkit-transform-origin: 20px 20px;
+        transform-origin        : 20px 20px;
+      }
+    }
+
+    .svg-menu-active {
+      .bar:nth-of-type(1) {
+        -webkit-transform: rotate(-45deg) translateY(0) translateX(0);
+        transform        : rotate(-45deg) translateY(0) translateX(0);
+      }
+
+      .bar:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      .bar:nth-of-type(3) {
+        -webkit-transform: rotate(45deg) translateY(0em) translateX(0em);
+        transform        : rotate(45deg) translateY(0em) translateX(0em);
+      }
+    }
+
+    .inline-svg {
+      display     : block;
+      margin      : 0 auto 7px;
+      padding-left: 11px;
+    }
+
+    &.btn--nav-active .inline-svg {
+      padding-left: 4px;
     }
   };
   // Style
