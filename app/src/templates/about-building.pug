@@ -1,10 +1,23 @@
 extends ./views/_layout.pug
 block vars
-  - var pageTitle = 'About Location'
+  - var pageTitle = 'About Building'
   - var bodyClass = 'about'
 
 block content
   .page
+    //- Menu Button
+    button.btn.btn--nav-toggle#js-nav-toggle
+      svg.inline-svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='320px', height='220.5px', viewbox='0 0 32 22.5', enable-background='new 0 0 32 22.5', xml:space='preserve')
+        title Mobile Menu
+        g.svg-menu-toggle
+          path.bar(d='M20.945,8.75c0,0.69-0.5,1.25-1.117,1.25H3.141c-0.617,0-1.118-0.56-1.118-1.25l0,0\
+          c0-0.69,0.5-1.25,1.118-1.25h16.688C20.445,7.5,20.945,8.06,20.945,8.75L20.945,8.75z')
+          path.bar(d='M20.923,15c0,0.689-0.501,1.25-1.118,1.25H3.118C2.5,16.25,2,15.689,2,15l0,0c0-0.689,0.5-1.25,1.118-1.25 h16.687C20.422,13.75,20.923,14.311,20.923,15L20.923,15z')
+          path.bar(d='M20.969,21.25c0,0.689-0.5,1.25-1.117,1.25H3.164c-0.617,0-1.118-0.561-1.118-1.25l0,0\
+          c0-0.689,0.5-1.25,1.118-1.25h16.688C20.469,20,20.969,20.561,20.969,21.25L20.969,21.25z')
+          // needs to be here as a 'hit area'
+          rect(width='320', height='220', fill='none')
+    //- Menu Button End
     //- Top Panel
     include includes/_top-panel
     //- Top Panel End
@@ -26,7 +39,7 @@ block content
               li.nav__item
                 a(href="about-docs.html").nav__link Документы
               li.nav__item.nav__item--active
-                a(href="about-building.html").nav__link Ход строительства
+                a(href="about-building.html").nav__link Динамика строительства
               li.nav__item
                 a(href="about-news.html").nav__link Новости
       section.section.section--horizontal
@@ -36,7 +49,7 @@ block content
           .section__inner.section__inner--center
             p.section__text До конца июня наши рабочие  успели выполнить самый трудоемкий и важный объем работ:  обустроили стройплощадку, вырыли котлован, вывезли грунт, заложили арматуру и отлили фундаментную плиту. 
       .video-container
-        iframe(src='https://ipeye.ru/ipeye_service/api/iframe.php?iframe_player=1&dev=84a62738ddd242ae9c5559147b0abcd4&autoplay=0' width='976' height='556' frameborder='0' seamless='seamless' allowfullscreen='') Ваш браузер не поддерживает фреймы!
+        iframe(src='https://ipeye.ru/ipeye_service/api/iframe.php?iframe_player=1&dev=84a62738ddd242ae9c5559147b0abcd4&autoplay=0', frameborder='0', seamless='seamless', allowfullscreen='')
       
     //- Footer
     include includes/_footer

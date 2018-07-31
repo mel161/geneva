@@ -8,6 +8,15 @@ $margin-base: $margin;
 $margin-large: 60px;
 $container-width: 960px;
 
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   background-color: $bg-color;
   box-sizing      : border-box;
@@ -135,7 +144,7 @@ body {
   width           : 100%;
   transition      : all 0.3s ease;
 
-  @media (min-width: 960px) {
+  @media (min-width: 480px) {
     height          : 100px;
   }
 
@@ -147,18 +156,30 @@ body {
     height  : 70px;
     // display: none;
 
-    @media (min-width: 960px) {
+    @media (min-width: 480px) {
       height: 60px;
     }
   }
 }
 
 .video-container {
-  width: 960px;
-  margin: 40px auto 80px;
+  margin: 40px 11px 80px;
+  position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
 
-  iframe #document body {
-    margin: 0 !important;
+  @media (min-width: 960px) {
+    width: 960px;
+    margin: 40px auto 80px;
+  }
+
+  iframe {
+    position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
   }
 }
 

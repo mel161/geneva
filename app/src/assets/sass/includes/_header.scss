@@ -38,8 +38,12 @@ $margin-large: 60px;
   };
   @include variant(main) {
     background-color: $content-header-bg-color;
-    padding         : 54px 0 50px;
+    padding         : 30px 0;
     text-align      : center;
+
+    @media (min-width: 960px) {
+      padding         : 54px 0 50px;
+    }
   };
   @include variant(transparent) {
     background-color: transparent;

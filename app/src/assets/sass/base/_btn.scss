@@ -82,6 +82,12 @@ $active-color: $accent;
         fill: $white;
       }
     }
+
+    .section--news & {
+      flex: 0 1 auto;
+      width: auto;
+      margin: 0 auto;
+    }
   };
   @include variant(transparent) {
     color           : $default-color;
@@ -190,6 +196,10 @@ $active-color: $accent;
     z-index         : 10;
     background-color: #505050;
     border-radius   : 50%;
+
+    @media (min-width: 960px) {
+      display: none;
+    }
 
     svg {
       width : 40px;

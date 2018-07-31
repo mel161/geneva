@@ -73,6 +73,24 @@ $(function() {
     };
 
     var heroHeight = $(".header--hero").height();
+    console.log(heroHeight);
+
+    function toggleHeaderFloating() {
+      if (window.scrollY > heroHeight) {
+        document.body.classList.add('sticky');
+      } else {
+        document.body.classList.remove('sticky');
+      }
+    }
+  } else {
+    var rafTimer;
+    window.onscroll = function(event) {
+      cancelAnimationFrame(rafTimer);
+      rafTimer = requestAnimationFrame(toggleHeaderFloating);
+    };
+
+    var heroHeight = 0;
+    console.log(heroHeight);
 
     function toggleHeaderFloating() {
       if (window.scrollY > heroHeight) {
@@ -82,6 +100,10 @@ $(function() {
       }
     }
   }
+
+  // if ($('.video-container')) {
+  //   $('.video-container').find('iframe').width($('.video-container').outerWidth() + 16).height($('.video-container').outerHeight() + 16)
+  // }
 
   const moveTo = new MoveTo()
   const triggers = document.getElementsByClassName('js-moveto');
@@ -189,7 +211,6 @@ $(function() {
   //     .add(myPlacemark2)
   //     .add(myPlacemark3);
   // }
-
 
   jQuery(document).ready(function($) {
     var theButton = $('#js-nav-toggle');

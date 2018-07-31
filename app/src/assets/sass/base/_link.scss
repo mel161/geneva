@@ -134,15 +134,20 @@
     color      : $white;
     line-height: 1.2;
 
-    .footer & {
+    me
 
+    .footer & {
       @media (min-width: 960px) {
         position: absolute;
         right   : 40px;
         top     : 60px;
       }
-
     }
+
+    @media (min-width: 480px) {
+      font-size: 14px;
+    }
+
     @media (min-width: 960px) {
       font-size    : 20px;
       margin-bottom: 10px;

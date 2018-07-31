@@ -1,5 +1,6 @@
 // General imports
-@import 'normalize/import-now';
+// @import 'normalize/import-now';
+@import 'node_modules/normalize-scss/sass/_normalize.scss';
 @import 'node_modules/photoswipe/src/css/main.scss';
 
 $pswp__assets-path:'../img/';
@@ -66,12 +67,14 @@ $margin: 40px;
 //
 //// Components
 //
-@import 'modules/logo';
-@import 'modules/hero';
-@import 'modules/nav';
-@import 'modules/social';
-@import 'modules/map';
-@import 'modules/card';
-@import 'modules/slider';
 @import 'modules/address';
+@import 'modules/card';
+@import 'modules/card--home';
+@import 'modules/card--news';
+@import 'modules/hero';
+@import 'modules/logo';
+@import 'modules/map';
 @import 'modules/modal';
+@import 'modules/nav';
+@import 'modules/slider';
+@import 'modules/social';
