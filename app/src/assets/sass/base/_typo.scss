@@ -50,6 +50,9 @@ a {
   margin-top : 37px;
   text-align : center;
 
+  @media (min-width: 960px) {
+    font-size: 14px;
+  }
 
 }
 // Text

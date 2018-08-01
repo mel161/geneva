@@ -1,11 +1,120 @@
 //
 .card--full {
   // Elements
+  .card__image-container {
+    @include aspect-ratio(1, 1);
+    overflow: hidden;
+    width: auto;
+    margin: 0 20px;
+    order: 2;
+    @media (orientation: landscape) {
+      &:before {
+        padding-top: 280px;
+      }
+    }
 
-  // Modifiers
+    @media (min-width: 640px) {
+      &:before {
+        padding-top: 280px;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      flex: 0 1 50%;
+      margin: 0;
+
+      &:before {
+        padding-top: 560px;
+      }
+    }
+  }
+
+  .card__image {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (orientation: landscape) {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (min-width: 640px) {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (min-width: 1000px) {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  .card__inner {
+    padding: 20px;
+    order: 1;
+
+    @media (min-width: 1000px) {
+      flex: 0 1 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    @media (min-width: 1380px) {
+      padding: 20px 80px;
+    }
+
+    // Modifiers
+    @media (min-width: 1000px) {
+      @include variant(left) {
+
+      };
+      @include variant(right) {
+        order: 2
+      };
+    }
+  }
+
+  .card__title {
+    font-size: 20px;
+    font-weight: 500;
+
+    @media (min-width: 1000px) {
+      width: 100%;
+      text-align: left;
+      font-size: 36px;
+      padding-right: 90px;
+    }
+    @media (min-width: 1380px) {
+      width: 100%;
+      // max-width: 500px;
+      font-size: 40px;
+      padding-right: 30%;
+    }
+  }
+
+  .card__text {
+    font-size: 16px;
+    font-weight: 300;
+
+    @media (min-width: 1380px) {
+      width: 100%;
+      padding-right: 33%;
+    }
+
+    @media (min-width: 1900px) {
+      padding-right: 40%;
+    }
+  }
 
   // Styles
-  
+  display: flex;
+  flex-direction: column;
 
 
   // Media Queries
@@ -22,7 +131,7 @@
   }
 
   @media (min-width: 1000px) {
-
+    flex-direction: row;
   }
 
   @media (min-width: 1160px) {

@@ -90,7 +90,6 @@ $(function() {
     };
 
     var heroHeight = 0;
-    console.log(heroHeight);
 
     function toggleHeaderFloating() {
       if (window.scrollY > heroHeight) {

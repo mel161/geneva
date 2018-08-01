@@ -38,8 +38,12 @@
   line-height: 1.2;
 
   .footer & {
-    font-size: 16px;
+    font-size  : 16px;
     font-weight: 300;
+
+    @media (min-width: 960px) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -48,29 +52,30 @@
   // @include has() {};
   // Modifiers
   @include variant(office) {
-    h4.heading {
+    .heading {
       font-size  : 20px;
       line-height: 1.2;
       margin     : 0 0 15px;
       font-weight: 300;
+      @media (min-width: 960px) {
+        margin: 0 0 5px;
+      }
     }
   };
-
   @include variant(top) {
     text-align: right;
   };
-
   @include variant(page) {
-    width: 880px;
-    margin: 60px auto;
-    display: flex;
+    width         : 880px;
+    margin        : 60px auto;
+    display       : flex;
     flex-direction: row;
 
     .block {
-      display: flex;
+      display       : flex;
       flex-direction: column;
       // justify-content: space-between;
-      align-items: baseline;
+      align-items   : baseline;
     }
   };
   // Styles

@@ -61,6 +61,18 @@ $muted-color: $grey-m;
     };
     @include variant(divider) {
       width: 360px;
+
+      @media (min-width: 1000px) {
+        width: 150px;
+      }
+
+      @media (min-width: 1160px) {
+        width: 190px;
+      }
+
+      @media (min-width: 1380px) {
+        width: 360px;
+      }
     };
     @include variant(current) {
 
@@ -200,17 +212,52 @@ $muted-color: $grey-m;
     margin   : 0 auto;
 
     .header & {
+      margin: 0 40px;
+      width: auto;
+
+      @media (max-width: 1159px) {
+        width: 840px;
+        margin: 0 auto;
+      }
+      @media (min-width: 1380px) {
+        width: 1280px;
+        margin: 0 auto;
+      }
       .nav__item {
         display: none;
+
+        @media (min-width: 1000px) {
+          display: block;
+        }
+
+        .nav__link {
+          @media (min-width: 1000px) {
+            font-size: 12px;
+          }
+          @media (min-width: 1160px) {
+            font-size: 14px;
+          }
+        }
 
         &.nav__item--active {
           display: block;
           width: 100%;
 
+          @media (min-width: 1000px) {
+            width: auto;
+          }
+
           .nav__link {
             font-size: 24px;
             color: $black;
 
+            @media (min-width: 1000px) {
+              font-size: 12px;
+              color: $active-color;
+            }
+            @media (min-width: 1160px) {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -256,7 +303,7 @@ $muted-color: $grey-m;
       @include circle-link-hover();
       align-items     : center;
       background-color: $nblack;
-      border          : 1px dashed $grey-color;
+      border          : 0;
       border-radius   : $link-size;
       color           : $grey-color;
       display         : flex;
@@ -269,11 +316,16 @@ $muted-color: $grey-m;
 
       .btn__bg {
         background-color: #141414;
+        border          : 1px dashed $grey-color;
       }
 
       &:hover {
-        border          : 1px solid $hover-color;
+
         background-color: $hover-color;
+
+        .btn__bg {
+          border          : 1px solid $hover-color;
+        }
 
         > .nav__image {
           fill: $white;
@@ -343,11 +395,17 @@ $muted-color: $grey-m;
       text-transform: uppercase;
     }
     @media (min-width: 960px) {
-      width: 900px;
+      display: none;
 
       .nav__list {
         display: none;
       }
+    }
+
+    @media (min-width: 1600px) {
+      display: block;
+      width: 600px;
+      border: 0;
     }
   };
   // Style

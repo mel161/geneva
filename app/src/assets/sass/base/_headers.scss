@@ -40,6 +40,8 @@ $title-color: $white;
     text-transform: uppercase;
     @media (min-width: 960px) {
       font-size: $title-font-size;
+      line-height: 1;
+      margin        : 20px 0 60px;
     }
   };
   @include variant(hide) {
@@ -70,6 +72,10 @@ $title-color: $white;
 
     @media (min-width: 960px) {
       font-size: 32px;
+
+        &:after {
+          display: none;
+        }
     }
   };
   @include variant(main) {
@@ -85,6 +91,13 @@ $title-color: $white;
     // position: absolute;
     // left: 50%;
     // margin-left: -175px;
+
+    @media (min-width: 1000px) {
+      font-size: 32px;
+    }
+    @media (min-width: 1000px) {
+      font-size: 40px;
+    }
   };
   @include variant(single) {
     margin-bottom: 0;
@@ -109,6 +122,13 @@ $title-color: $white;
     text-transform: none;
     margin-bottom : 30px;
     color         : $white;
+
+    @media (min-width: 960px) {
+      .contacts--office  & {
+        margin-bottom: 5px;
+
+      }
+    }
   };
   // Styles
   text-transform: uppercase;
