@@ -12,24 +12,140 @@ $margin-big: $margin * 2;
     margin         : 0 $margin-base/2 80px;
   };
   @include has(container) {
-    flex-basis: calc(50% - 10px);
+    @include aspect-ratio(1,1);
+    flex-basis: auto;
+    overflow: hidden;
+    width: 100%;
 
-    img {
-      width: 100%;
+    @media (min-width: 1000px) {
+      flex-basis: calc(50% - 10px);
+
+      &:before {
+        display: none;
+      }
     }
+    img {
+      position: absolute;
+      height: 100%;
+      width: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    @include variant(map) {
+      display: none;
+
+      @media (min-width: 1000px) {
+        display: block;
+      }
+    };
   };
   // Styles
   .nav {
+    // display: none;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #e6e6e6;
+    padding: 20px;
+    z-index: 4;
+    width: 100%;
+    text-align: center;
+
+    &.nav--visible {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 180px;
+
+      .nav__list {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+      }
+
+      .js-location-toggle {
+        display: inline-block;
+        margin-bottom: 30px;
+      }
+    }
+
+    .nav__list {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      .nav__item {
+        margin-right: 10px;
+      }
+    }
     // margin-left: $margin-big;
-    margin: $margin-large auto $margin;
+    @media (min-width: 1000px) {
+      margin: $margin-large auto $margin;
+      position: relative;
+      background-color: transparent;
+
+      .nav__list {
+        display: flex;
+        width: 620px;
+        margin: 0 auto;
+        justify-content: space-between;
+
+        .nav__item {
+          margin: 0;
+
+          .nav__link {
+
+          }
+        }
+      }
+    }
   }
 
   & + .link {
     margin-left: $margin-big;
   }
-
   #map {
     width: 100%;
-    height: 600px;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    @media (min-width: 1000px) {
+      height: 600px;
+      position: relative;
+    }
+  }
+
+  .js-location-toggle {
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 17px;
+
+    .text {
+      display: none;
+
+      &.text--visible {
+        display: inline-block;
+      }
+    }
+
+
+    &.link--to-top {
+      bottom: 20px;
+    }
+    &.link--to-top.js-location--visible {
+      bottom: 140px;
+    }
+    @media (min-width: 1000px) {
+      display: none;
+    }
   }
 }

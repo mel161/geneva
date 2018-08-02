@@ -1,7 +1,39 @@
-.image {
-  .main-content & {
-    margin: $margin 0;
+.image-container {
+  .content & {
+    @include aspect-ratio(1,1);
+    width: 100%;
+    overflow: hidden;
+
+    .image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+      height: 100%;
+    }
+
+    @media (min-width: 1000px) {
+      &:before {
+        display: none;
+      }
+
+      .image {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+      }
+    }
   }
+}
+
+.image {
+  // .content & {
+  //   margin: $margin 0;
+  // }
+
+
 
   .map & {
     max-height: 440px;

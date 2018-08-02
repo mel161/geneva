@@ -41,7 +41,7 @@
     font-size  : 16px;
     font-weight: 300;
 
-    @media (min-width: 960px) {
+    @media (min-width: 1000px) {
       font-size: 14px;
     }
   }
@@ -57,7 +57,7 @@
       line-height: 1.2;
       margin     : 0 0 15px;
       font-weight: 300;
-      @media (min-width: 960px) {
+      @media (min-width: 1000px) {
         margin: 0 0 5px;
       }
     }
@@ -66,16 +66,32 @@
     text-align: right;
   };
   @include variant(page) {
-    width         : 880px;
+    width         : auto;
     margin        : 60px auto;
     display       : flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    @media (min-width: 1000px) {
+      width         : 880px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
     .block {
+      width: auto;
       display       : flex;
       flex-direction: column;
       // justify-content: space-between;
-      align-items   : baseline;
+      align-items   : center;
+      margin-bottom: 40px;
+
+      @media (min-width: 1000px) {
+        display       : flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        align-items   : baseline;
+        margin-bottom: 0;
+      }
     }
   };
   // Styles

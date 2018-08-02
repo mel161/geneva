@@ -49,11 +49,9 @@ a {
   line-height: 1.2;
   margin-top : 37px;
   text-align : center;
-
-  @media (min-width: 960px) {
+  @media (min-width: 1000px) {
     font-size: 14px;
   }
-
 }
 // Text
 
@@ -62,17 +60,24 @@ a {
     font-size: 10px;
   }
   @include variant(small) {
-    font-size: 14px;
+    font-size: 12px;
+    @media (min-width: 1000px) {
+      font-size: 14px;
+    }
   }
   @include variant(medium) {
     font-size: 16px;
   };
   @include variant(large) {
-    font-size  : 20px;
+    font-size  : 18px;
     color      : $black;
     line-height: 1.2;
     text-align : left;
     margin     : 0;
+
+    @media (min-width: 1000px) {
+      font-size  : 20px;
+    }
   };
   @include variant(extralarge) {
     font-size  : 72px;
@@ -82,7 +87,10 @@ a {
     color: $grey-m;
   };
   @include variant(date) {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
+    @media (min-width: 1000px) {
+      margin-bottom: 60px;
+    }
     display      : block;
   };
 }
@@ -103,11 +111,11 @@ a {
     }
 
     .btn--call-back {
-      display: block;
-      width: auto;
-      margin: 10px auto 0;
-      font-size: 12px;
-      font-weight: 500;
+      display       : block;
+      width         : auto;
+      margin        : 10px auto 0;
+      font-size     : 12px;
+      font-weight   : 500;
       text-transform: uppercase;
 
       .sticky .footer & {

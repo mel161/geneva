@@ -15,8 +15,6 @@ block content
           path.bar(d='M20.923,15c0,0.689-0.501,1.25-1.118,1.25H3.118C2.5,16.25,2,15.689,2,15l0,0c0-0.689,0.5-1.25,1.118-1.25 h16.687C20.422,13.75,20.923,14.311,20.923,15L20.923,15z')
           path.bar(d='M20.969,21.25c0,0.689-0.5,1.25-1.117,1.25H3.164c-0.617,0-1.118-0.561-1.118-1.25l0,0\
           c0-0.689,0.5-1.25,1.118-1.25h16.688C20.469,20,20.969,20.561,20.969,21.25L20.969,21.25z')
-          // needs to be here as a 'hit area'
-          rect(width='320', height='220', fill='none')
     //- Menu Button End
     //- Top Panel
     include includes/_top-panel
@@ -84,7 +82,7 @@ block content
               | dom-t.su
               
       .map.map--contact
-        .map__container
+        .map__container.map__container--map
           script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A138da0a726e6c987be8e6133f017cbcdd80f71b8417967dc13e071d41530a42e&height=440&lang=ru_RU&scroll=true')
         .map__container
           img(src="./assets/img/contacts-ofice.jpg" alt="").image

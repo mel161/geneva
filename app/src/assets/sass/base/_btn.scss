@@ -95,7 +95,7 @@ $active-color: $accent;
     padding         : 21px 40px;
     background-color: transparent;
 
-    @media (min-width: 960px) {
+    @media (min-width: 1000px) {
       padding         : 21px 60px;
     }
 
@@ -149,7 +149,7 @@ $active-color: $accent;
         fill: $default-color;
       }
     }
-    @media (min-width: 960px) {
+    @media (min-width: 1000px) {
       display: block;
     }
 
@@ -178,7 +178,7 @@ $active-color: $accent;
     .card & {
       display: none;
 
-      @media (min-width: 960px) {
+      @media (min-width: 1000px) {
         display: block;
       }
     }
@@ -199,7 +199,7 @@ $active-color: $accent;
     background-color: #505050;
     border-radius   : 50%;
 
-    @media (min-width: 960px) {
+    @media (min-width: 1000px) {
       display: none;
     }
 

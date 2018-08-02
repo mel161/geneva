@@ -23,7 +23,7 @@
   @include variant(to-top) {
     margin        : 35px 0;
     text-transform: uppercase;
-    display: none;
+    display       : none;
 
     .main-content & {
       width: 100%;
@@ -63,7 +63,7 @@
     &:hover {
       background-color: $accent;
     }
-    @media (min-width: 960px) {
+    @media (min-width: 1000px) {
       background-color: transparent;
       bottom          : 60px;
       position        : absolute;
@@ -77,7 +77,6 @@
       }
     }
   };
-
   @include variant(to-top) {
     align-items     : center;
     background-color: #505050;
@@ -109,26 +108,38 @@
     .sticky & {
       z-index: 11;
     }
-
-    @media (min-width: 960px) {
+    @media (min-width: 1000px) {
       @include circle-link-hover();
-      margin: 0 0 0 -30px;
-      bottom: -30px;
+      margin     : 0 0 0 -30px;
+      bottom     : -30px;
       line-height: 60px;
-      text-align: center;
+      text-align : center;
     }
   }
-
   @include variant(back) {
     clear         : both;
     color         : $grey-m;
     display       : block;
     float         : none;
-    font-size     : 14px;
+    font-size     : 12px;
     font-weight   : 500;
     line-height   : 20px;
     text-transform: uppercase;
-    margin-bottom : 30px;
+    margin-bottom : 10px;
+
+    .icon--arrow-left {
+      width : 7px;
+      height: 11px;
+    }
+    @media (min-width: 1000px) {
+      font-size: 14px;
+      margin-bottom : 30px;
+
+      .icon--arrow-left {
+        height: 14px;
+        width : 8px;
+      }
+    }
 
     .main-content & {
       margin-bottom: $margin;
@@ -141,21 +152,17 @@
     color      : $white;
     line-height: 1.2;
 
-    me
-
-    .footer & {
-      @media (min-width: 960px) {
+    me .footer & {
+      @media (min-width: 1000px) {
         position: absolute;
         right   : 40px;
         top     : 60px;
       }
     }
-
     @media (min-width: 480px) {
       font-size: 14px;
     }
-
-    @media (min-width: 960px) {
+    @media (min-width: 1000px) {
       font-size    : 20px;
       margin-bottom: 10px;
     }
@@ -167,10 +174,9 @@
       font-weight  : 500;
       margin-bottom: 18px;
     }
-
     @media (min-width: 1160px) {
       .contacts--footer & {
-          border: 0;
+        border: 0;
       }
     }
   }

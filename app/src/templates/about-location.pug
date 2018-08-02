@@ -4,7 +4,7 @@ block vars
   - var bodyClass = 'about'
 
 block content
-  .page
+  .page.page--location
     //- Menu Button
     button.btn.btn--nav-toggle#js-nav-toggle
       svg.inline-svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='320px', height='220.5px', viewbox='0 0 32 22.5', enable-background='new 0 0 32 22.5', xml:space='preserve')
@@ -15,14 +15,12 @@ block content
           path.bar(d='M20.923,15c0,0.689-0.501,1.25-1.118,1.25H3.118C2.5,16.25,2,15.689,2,15l0,0c0-0.689,0.5-1.25,1.118-1.25 h16.687C20.422,13.75,20.923,14.311,20.923,15L20.923,15z')
           path.bar(d='M20.969,21.25c0,0.689-0.5,1.25-1.117,1.25H3.164c-0.617,0-1.118-0.561-1.118-1.25l0,0\
           c0-0.689,0.5-1.25,1.118-1.25h16.688C20.469,20,20.969,20.561,20.969,21.25L20.969,21.25z')
-          // needs to be here as a 'hit area'
-          rect(width='320', height='220', fill='none')
     //- Menu Button End
     //- Top Panel
     include includes/_top-panel
     //- Top Panel End
     main.content#js-top
-      header.header.header--main
+      header.header.header--main.header--location
         .header__inner   
           //- h1.heading.heading--main В центре жизни
           nav.nav.nav--inline
@@ -43,7 +41,7 @@ block content
                 a(href="about-building.html").nav__link Ход строительства
               li.nav__item
                 a(href="about-news.html").nav__link Новости
-      section.section.section--horizontal
+      section.section.section--horizontal.section--location
         .container
           .section__header
             h2.section__title Идеальное&nbsp;местоположение для жизни и работы
@@ -51,21 +49,32 @@ block content
             p.section__text «Женева» возвышается над парком «ХХII Партсъезда», балансируя на грани природы&nbsp;и большого города. 
             p.section__text Из «Женевы» можно попасть в любую точку Екатеринбурга, потратив минимум времени и сил. А можно остаться дома, наслаждаясь пением птиц под окном. Весь город к вашим услугам.
       .map
-        .container
-          nav.nav.nav--inline.nav--underline
-            ul.nav__list
-              li.nav__item.nav__item--underline.nav__item--active
-                a(href="#").nav__link Все объекты
-              li.nav__item.nav__item--underline
-                a(href="#").nav__link Транспорт
-              li.nav__item.nav__item--underline
-                a(href="#").nav__link Школы и детские сады
-              li.nav__item.nav__item--underline
-                a(href="#").nav__link Медицина
-              li.nav__item.nav__item--underline
-                a(href="#").nav__link Отдых
-              li.nav__item.nav__item--underline
-                a(href="#").nav__link Магазины
+        //- Button To Up
+        a(href="").js-location-toggle.link.link--to-top 
+          svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 32.04 57.72').icon.icon--arrow-top
+            g#Layer_2(data-name='Layer 2')
+              g#Layer_1-2(data-name='Layer 1')
+                path(d='M32,28.86a3.16,3.16,0,0,0-.93-2.25L5.43.94A3.16,3.16,0,0,0,3.18,0h0A3.19,3.19,0,0,0,0,3.19,3.16,3.16,0,0,0,.93,5.44L24.36,28.86.93,52.29a3.18,3.18,0,1,0,4.5,4.5L31.11,31.11A3.15,3.15,0,0,0,32,28.86Z')
+        //- Button To Up End
+        //- .container
+        nav.nav.nav--inline.nav--underline
+          a(href="").js-location-toggle.link.link--dashed 
+            span.text.text--visible выбрать объекты инфраструктуры
+            span.text скрыть
+            
+          ul.nav__list
+            li.nav__item.nav__item--underline.nav__item--active
+              a(href="#").nav__link Все объекты
+            li.nav__item.nav__item--underline
+              a(href="#").nav__link Транспорт
+            li.nav__item.nav__item--underline
+              a(href="#").nav__link Школы и детские сады
+            li.nav__item.nav__item--underline
+              a(href="#").nav__link Медицина
+            li.nav__item.nav__item--underline
+              a(href="#").nav__link Отдых
+            li.nav__item.nav__item--underline
+              a(href="#").nav__link Магазины
         
         #map
         

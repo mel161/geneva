@@ -180,7 +180,7 @@ $muted-color: $grey-m;
       top             : 0;
       left            : 0;
     }
-    @media (min-width: 960px) {
+    @media (min-width: 1000px) {
       display: flex;
     }
   };
@@ -215,7 +215,7 @@ $muted-color: $grey-m;
       margin: 0 40px;
       width: auto;
 
-      @media (max-width: 1159px) {
+      @media (min-width: 1000px) and (max-width: 1159px) {
         width: 840px;
         margin: 0 auto;
       }
@@ -267,7 +267,7 @@ $muted-color: $grey-m;
 
     }
 
-    @media (min-width: 960px) {
+    @media (min-width: 1000px) {
 
     }
   };
@@ -312,7 +312,7 @@ $muted-color: $grey-m;
       position        : relative;
       transition      : all 0.3s ease;
       width           : $link-size;
-      z-index         : 2;
+      z-index         : 1;
 
       .btn__bg {
         background-color: #141414;
@@ -394,7 +394,7 @@ $muted-color: $grey-m;
       font-size     : 16px;
       text-transform: uppercase;
     }
-    @media (min-width: 960px) {
+    @media (min-width: 1000px) {
       display: none;
 
       .nav__list {

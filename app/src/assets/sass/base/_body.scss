@@ -66,19 +66,32 @@ body {
   // Styles
   margin : 0;
   padding: 0;
+
+  &.page--location {
+    .js-moveto.link--to-top {
+      display: none;
+    }
+    .js-location-toggle {
+      z-index: 3;
+    }
+  }
 }
 //
 
 .content {
   .single-news &,
   .text-page & {
-    width: 960px;
-    margin: 0 auto;
+    margin: 20px;
 
-    .header, section {
-      width: 630px;
-      margin-right: auto;
-      margin-left: auto;
+    @media (min-width: 1000px) {
+      width: 960px;
+      margin: 0 auto;
+
+      .header, section, .text--large {
+        width: 630px;
+        margin-right: auto;
+        margin-left: auto;
+      }
     }
 
     section {
@@ -90,11 +103,16 @@ body {
     }
 
     h2 {
-      font-size: 24px;
+      font-size: 20px;
       line-height: 1.2;
-      text-align: center;
+      text-align: left;
       font-weight: 500;
       margin-bottom: 35px;
+
+      @media (min-width: 1000px) {
+        font-size: 24px;
+        text-align: center;
+      };
     }
     p {
       // font-size: 16px;
@@ -104,7 +122,7 @@ body {
   }
 
   .text-page & {
-    width: 100%;
+    width: auto;
     // text-align: center;
     .image {
       margin-right: auto;
@@ -112,10 +130,12 @@ body {
       display: block;
     }
     .header {
-      width: 100%;
+      width: auto;
       .header__inner {
-        width: 960px;
-        margin: 0 auto;
+        @media (min-width: 1000px) {
+          width: 960px;
+          margin: 0 auto;
+        }
       }
     }
   }
@@ -143,6 +163,8 @@ body {
   height          : 70px;
   width           : 100%;
   transition      : all 0.3s ease;
+  z-index: 3;
+  position: relative;
 
   @media (min-width: 480px) {
     height          : 100px;
@@ -169,7 +191,7 @@ body {
 	padding-top: 25px;
 	height: 0;
 
-  @media (min-width: 960px) {
+  @media (min-width: 1000px) {
     width: 960px;
     margin: 40px auto 80px;
   }
@@ -205,8 +227,32 @@ body {
   display: flex;
 
   @include variant(parking) {
-    justify-content: center;
-    align-items: center;
-    margin: $margin-base auto $margin-base * 2;
+    @include aspect-ratio(880,476);
+
+    width: 100%;
+
+    margin: $margin-base 0 70px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    @media (min-width: 1000px) {
+      width: 960px;
+      justify-content: center;
+      align-items: center;
+      margin: $margin-base auto $margin-base * 2;
+
+      &:before {
+        display: none;
+      }
+
+      img {
+        position: relative;
+      }
+    }
   };
 }

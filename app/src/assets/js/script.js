@@ -154,62 +154,73 @@ $(function() {
   //   });
   // });
 
-  // ymaps.ready(init);
-  //
-  // function init() {
-  //   var myMap = new ymaps.Map("map", {
-  //       center: [56.84, 60.58],
-  //       zoom: 15
-  //     }),
-  //
-  //     myPlacemark1 = new ymaps.Placemark([56.839233, 60.579019], {
-  //       // Свойства.
-  //       hintContent: 'Собственный значок метки'
-  //     }, {
-  //       // Опции.
-  //       // Своё изображение иконки метки.
-  //       iconImageHref: './assets/img/point-home.png',
-  //       // Размеры метки.
-  //       iconImageSize: [68, 79],
-  //       // Смещение левого верхнего угла иконки относительно
-  //       // её "ножки" (точки привязки).
-  //       iconImageOffset: [-34, -59]
-  //     }),
-  //
-  //     myPlacemark2 = new ymaps.Placemark([56.832474, 60.573592], {
-  //       // Свойства.
-  //       hintContent: 'Собственный значок метки'
-  //     }, {
-  //       // Опции.
-  //       // Своё изображение иконки метки.
-  //       iconImageHref: './assets/img/point-other.png',
-  //       // Размеры метки.
-  //       iconImageSize: [42, 51],
-  //       // Смещение левого верхнего угла иконки относительно
-  //       // её "ножки" (точки привязки).
-  //       iconImageOffset: [-21, -35]
-  //     }),
-  //
-  //     myPlacemark3 = new ymaps.Placemark([56.839660, 60.575438], {
-  //       // Свойства.
-  //       hintContent: 'Собственный значок метки'
-  //     }, {
-  //       // Опции.
-  //       // Своё изображение иконки метки.
-  //       iconImageHref: './assets/img/point-other.png',
-  //       // Размеры метки.
-  //       iconImageSize: [42, 51],
-  //       // Смещение левого верхнего угла иконки относительно
-  //       // её "ножки" (точки привязки).
-  //       iconImageOffset: [-21, -35]
-  //     });
-  //
-  //   // Добавляем все метки на карту.
-  //   myMap.geoObjects
-  //     .add(myPlacemark1)
-  //     .add(myPlacemark2)
-  //     .add(myPlacemark3);
-  // }
+
+  if ($('#map')) {
+    ymaps.ready(init);
+
+    $('.js-location-toggle').click(function(e) {
+      e.preventDefault();
+      $('.js-location-toggle.link--dashed .text').toggleClass('text--visible');
+      $('.js-location-toggle .icon').toggleClass('icon--arrow-down');
+      $('.js-location-toggle').toggleClass('js-location--visible');
+      $('.map .nav').toggleClass('nav--visible');
+    });
+  }
+
+  function init() {
+    var myMap = new ymaps.Map("map", {
+        center: [56.84, 60.58],
+        zoom: 15
+      }),
+
+      myPlacemark1 = new ymaps.Placemark([56.839233, 60.579019], {
+        // Свойства.
+        hintContent: 'Собственный значок метки'
+      }, {
+        // Опции.
+        // Своё изображение иконки метки.
+        iconImageHref: './assets/img/point-home.png',
+        // Размеры метки.
+        iconImageSize: [68, 79],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-34, -59]
+      }),
+
+      myPlacemark2 = new ymaps.Placemark([56.832474, 60.573592], {
+        // Свойства.
+        hintContent: 'Собственный значок метки'
+      }, {
+        // Опции.
+        // Своё изображение иконки метки.
+        iconImageHref: './assets/img/point-other.png',
+        // Размеры метки.
+        iconImageSize: [42, 51],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-21, -35]
+      }),
+
+      myPlacemark3 = new ymaps.Placemark([56.839660, 60.575438], {
+        // Свойства.
+        hintContent: 'Собственный значок метки'
+      }, {
+        // Опции.
+        // Своё изображение иконки метки.
+        iconImageHref: './assets/img/point-other.png',
+        // Размеры метки.
+        iconImageSize: [42, 51],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-21, -35]
+      });
+
+    // Добавляем все метки на карту.
+    myMap.geoObjects
+      .add(myPlacemark1)
+      .add(myPlacemark2)
+      .add(myPlacemark3);
+  }
 
   jQuery(document).ready(function($) {
     var theButton = $('#js-nav-toggle');

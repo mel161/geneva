@@ -39,7 +39,7 @@ $margin-large: 60px;
       }
     }
 
-    @media (min-width: 960px) {
+    @media (min-width: 1000px) {
       height: 64px;
       width : 180px;
 
@@ -57,7 +57,7 @@ $margin-large: 60px;
       height: 120px;
       width : 86px;
 
-      @media (min-width: 960px) {
+      @media (min-width: 1000px) {
         height: 160px;
         width : 114px;
       };
@@ -72,7 +72,7 @@ $margin-large: 60px;
       top: 20px;
     }
 
-    @media (min-width: 960px) {
+    @media (min-width: 1000px) {
       margin-left: -57px;
       top: 60px;
     };
@@ -82,7 +82,7 @@ $margin-large: 60px;
     display: block;
     margin: 0 auto 36px;
 
-    @media (min-width: 960px) {
+    @media (min-width: 1000px) {
       margin-right: 80px;
     }
 
@@ -91,7 +91,7 @@ $margin-large: 60px;
       height: 70px;
       margin: 0;
 
-      @media (min-width: 960px) {
+      @media (min-width: 1000px) {
 
         width: 168px;
         height: 60px;
