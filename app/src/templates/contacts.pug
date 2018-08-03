@@ -71,6 +71,10 @@ block content
               | г.Екатеринбург, ул. Ясная, 2,
               br
               | оф. 503 (ТРЦ «Фан Фан»)
+            .block
+              span
+                i.icon.icon--point-small
+                a.link.link--dashed(href="#") Посмотреть на карте
           //- Address End
         .block
           h2.heading.heading--contacts Сайт застройщика:
@@ -82,8 +86,8 @@ block content
               | dom-t.su
               
       .map.map--contact
-        .map__container.map__container--map
-          script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A138da0a726e6c987be8e6133f017cbcdd80f71b8417967dc13e071d41530a42e&height=440&lang=ru_RU&scroll=true')
+        .map__container.map__container--map#map
+          .map__close
         .map__container
           img(src="./assets/img/contacts-ofice.jpg" alt="").image
 

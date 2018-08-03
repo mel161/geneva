@@ -1,37 +1,6 @@
 .address {
   // Elements
-  // @include has(title) {
-  //   margin-bottom: 30px;
-  // };
-  // @include has(text) {};
-  // @include variant(contact) {
-  //   display        : flex;
-  //   flex-direction : row;
-  //   width          : 100%;
-  //   justify-content: center;
-  //   align-items    : baseline;
-  //   padding        : 60px 0;
-  //   text-align     : left;
-  //
-  //   .block {
-  //     display       : flex;
-  //     flex-direction: column;
-  //     margin-right  : 90px;
-  //
-  //     &:last-of-type {
-  //       margin-right: 0;
-  //     }
-  //   }
-  //
-  //   .link {
-  //     color  : $black;
-  //     display: inline-block;
-  //
-  //     &.link--phone {
-  //       margin: 0 0 22px;
-  //     }
-  //   }
-  // };
+
   // Styles
   color      : $grey;
   font-size  : 14px;
@@ -84,6 +53,13 @@
       // justify-content: space-between;
       align-items   : center;
       margin-bottom: 40px;
+
+      .block {
+        margin-bottom: 0;
+        @media (min-width: 1000px) {
+          display: none;
+        }
+      }
 
       @media (min-width: 1000px) {
         display       : flex;
