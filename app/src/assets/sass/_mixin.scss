@@ -19,7 +19,7 @@
   transition   : all 0.3s ease;
 
   .btn__lines {
-    background     : linear-gradient(to bottom, #fff, #fff 1px, transparent 1px, transparent);
+    background     : linear-gradient(to bottom, $grey-light, $grey-light 1px, transparent 1px, transparent);
     background-size: 100% 3px;
     border-radius  : 59px;
     content        : '';

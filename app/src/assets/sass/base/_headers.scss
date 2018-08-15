@@ -39,9 +39,9 @@ $title-color: $white;
     margin        : 20px 0 32px;
     text-transform: uppercase;
     @media (min-width: 1000px) {
-      font-size: $title-font-size;
+      font-size  : $title-font-size;
       line-height: 1;
-      margin        : 20px 0 60px;
+      margin     : 20px 0 60px;
     }
   };
   @include variant(hide) {
@@ -61,21 +61,20 @@ $title-color: $white;
     text-transform: none !important;
 
     &:after {
-      display: inline-block;
-      content: '';
-      position: relative;
+      display         : inline-block;
+      content         : '';
+      position        : relative;
       background-image: url('../img/arrow.svg');
-      width: 7px;
-      height: 12px;
-      margin-left: 10px;
+      width           : 7px;
+      height          : 12px;
+      margin-left     : 10px;
     }
-
     @media (min-width: 1000px) {
       font-size: 32px;
 
-        &:after {
-          display: none;
-        }
+      &:after {
+        display: none;
+      }
     }
   };
   @include variant(main) {
@@ -91,7 +90,6 @@ $title-color: $white;
     // position: absolute;
     // left: 50%;
     // margin-left: -175px;
-
     @media (min-width: 1000px) {
       font-size: 32px;
     }
@@ -109,17 +107,18 @@ $title-color: $white;
     font-weight   : 300;
     text-transform: uppercase;
     margin-bottom : 10px;
-
     @media (min-width: 1000px) {
-      font-size: 42px;
-      margin-bottom : 20px;
+      font-size    : 42px;
+      margin-bottom: 20px;
     }
   };
   @include variant(contacts) {
     font-size     : 20px;
+    font-weight   : 500;
     line-height   : 1.2;
     text-transform: none;
     margin-bottom : 30px;
+    text-align    : left;
   };
   @include variant(office) {
     font-size     : 20px;
@@ -127,11 +126,9 @@ $title-color: $white;
     text-transform: none;
     margin-bottom : 30px;
     color         : $white;
-
     @media (min-width: 1000px) {
-      .contacts--office  & {
+      .contacts--office & {
         margin-bottom: 5px;
-
       }
     }
   };

@@ -63,6 +63,7 @@ $active-color: $accent;
 
     span {
       line-height: 13px;
+      font-weight: 500;
     }
 
     > .icon {
@@ -84,9 +85,13 @@ $active-color: $accent;
     }
 
     .section--news & {
-      flex: 0 1 auto;
-      width: auto;
-      margin: 0 auto;
+      flex  : 0 1 auto;
+      width : auto;
+      margin: 30px auto 0;
+    }
+
+    .contacts--page & {
+      padding: 21px 46px;
     }
   };
   @include variant(transparent) {
@@ -94,9 +99,8 @@ $active-color: $accent;
     border          : 1px solid $default-color;
     padding         : 21px 40px;
     background-color: transparent;
-
     @media (min-width: 1000px) {
-      padding         : 21px 60px;
+      padding: 21px 60px;
     }
 
     .color {
@@ -167,8 +171,7 @@ $active-color: $accent;
     right           : 40px;
     bottom          : -60px;
     transition      : all 0.6s ease;
-
-    text-align: center;
+    text-align      : center;
 
     > .icon {
       position: relative;
@@ -177,7 +180,6 @@ $active-color: $accent;
 
     .card & {
       display: none;
-
       @media (min-width: 1000px) {
         display: block;
       }
@@ -198,7 +200,6 @@ $active-color: $accent;
     z-index         : 10;
     background-color: #505050;
     border-radius   : 50%;
-
     @media (min-width: 1000px) {
       display: none;
     }
@@ -260,28 +261,32 @@ $active-color: $accent;
       padding-left: 4px;
     }
   };
-
   @include variant(map) {
-    width: 50px;
-    height: 50px;
-    margin: 0;
-    padding: 0;
+    width           : 50px;
+    height          : 50px;
+    margin          : 0;
+    padding         : 0;
     background-color: #505050;
-    border-radius: 500px;
-    border: 0;
-    text-align: center !important;
-    line-height: 50px;
+    border-radius   : 500px;
+    border          : 0;
+    text-align      : center !important;
+    line-height     : 50px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    &:hover {
+      > svg path {
+        fill: $default-color;
+      }
+    }
   };
   // Style
   background-color: transparent;
   border          : 1px solid $default-color;
   color           : $default-color;
   display         : inline-block;
+  font-family     : $font-sans;
   font-size       : 14px;
   font-weight     : 500;
   outline         : 0;

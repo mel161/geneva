@@ -228,6 +228,7 @@ $muted-color: $grey-m;
 
         @media (min-width: 1000px) {
           display: block;
+          color: $grey-m;
         }
 
         .nav__link {
