@@ -1,22 +1,25 @@
 .address {
   // Elements
-
   // Styles
   color      : $grey;
   font-size  : 14px;
   line-height: 1.2;
 
   .contacts--page & {
-    color: #000;
-    font-size: 16px;
+    color      : #000;
+    font-size  : 16px;
     font-weight: 300;
-    text-align: left;
+    text-align : center;
+    margin-top : 16px;
+
+    @media (min-width: 1000px) {
+      text-align: left;
+    }
   }
 
   .footer & {
     font-size  : 16px;
     font-weight: 300;
-
     @media (min-width: 1000px) {
       font-size: 14px;
     }
@@ -33,6 +36,7 @@
       line-height: 1.2;
       margin     : 0 0 15px;
       font-weight: 300;
+      text-align: center;
       @media (min-width: 1000px) {
         margin: 0 0 5px;
       }
@@ -46,25 +50,28 @@
     margin        : 60px auto;
     display       : flex;
     flex-direction: column;
-
+    align-items   : center;
     @media (min-width: 1000px) {
-      width         : auto;
-      flex-direction: row;
+      max-width      : 960px;
+      flex-direction : row;
       justify-content: space-between;
-      margin        : 60px 20px;
+      margin         : 60px auto;
     }
 
     .block {
-      width: auto;
+      width         : auto;
       display       : flex;
       flex-direction: column;
       // justify-content: space-between;
       align-items   : center;
-      margin-bottom: 40px;
-      width: 275px;
+      margin-bottom : 40px;
+      width         : 275px;
 
       > span {
-        margin-left: 20px;
+        @media (min-width: 1000px) {
+          margin-left: 20px;
+
+        }
       }
 
       .block {
@@ -73,13 +80,12 @@
           display: none;
         }
       }
-
       @media (min-width: 1000px) {
         display       : flex;
         flex-direction: column;
         // justify-content: space-between;
         align-items   : baseline;
-        margin-bottom: 0;
+        margin-bottom : 0;
       }
     }
   };

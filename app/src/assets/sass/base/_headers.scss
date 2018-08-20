@@ -78,7 +78,7 @@ $title-color: $white;
     }
   };
   @include variant(main) {
-    font-size     : 40px;
+    font-size     : 24px;
     color         : $black;
     text-transform: uppercase;
     line-height   : 1;
@@ -92,13 +92,20 @@ $title-color: $white;
     // margin-left: -175px;
     @media (min-width: 1000px) {
       font-size: 32px;
+      line-height: 38px;
     }
     @media (min-width: 1360px) {
       font-size: 40px;
+      line-height: 1;
     }
   };
   @include variant(single) {
-    margin-bottom: 0;
+    max-width: 80%;
+    margin: 0 auto;
+
+    @media (min-width: 1000px) {
+      width: auto;
+    }
   };
   @include variant(news) {
     font-size     : 24px;
@@ -117,7 +124,7 @@ $title-color: $white;
     font-weight   : 500;
     line-height   : 1.2;
     text-transform: none;
-    margin-bottom : 30px;
+    margin-bottom : 16px;
     text-align    : left;
   };
   @include variant(office) {

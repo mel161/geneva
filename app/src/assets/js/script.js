@@ -73,7 +73,6 @@ $(function() {
     };
 
     var heroHeight = $(".header--hero").height();
-    console.log(heroHeight);
 
     function toggleHeaderFloating() {
       if (window.scrollY > heroHeight) {

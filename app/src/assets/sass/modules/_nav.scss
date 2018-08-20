@@ -63,7 +63,12 @@ $muted-color: $grey-m;
       width: 360px;
 
       @media (min-width: 1000px) {
-        width: 150px;
+        width: 165px;
+
+        .nav--inline & {
+          margin-left: 14px;
+          margin-right: 16px;
+        }
       }
 
       @media (min-width: 1160px) {
@@ -80,7 +85,8 @@ $muted-color: $grey-m;
     @include variant(parent) {
       .icon {
         float: right;
-
+        width: 8px;
+        height: 14px;
         path {
           fill: $white;
         }
@@ -160,9 +166,13 @@ $muted-color: $grey-m;
       position       : relative;
       text-decoration: none;
       text-transform : uppercase;
-      font-size      : 16px;
+      font-size      : 14px;
       line-height    : 1.6;
       font-weight    : 300;
+
+      @media (min-width: 1160px) {
+        font-size      : 16px;
+      }
     }
     // Style
     width          : 500px;
@@ -182,6 +192,9 @@ $muted-color: $grey-m;
     }
     @media (min-width: 1000px) {
       display: flex;
+      width: 453px;
+      margin-left: -13px;
+      margin-bottom: 4px;
     }
   };
   //
@@ -191,7 +204,7 @@ $muted-color: $grey-m;
       display        : -webkit-flex;
       display        : -ms-flex;
       display        : flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items    : center;
       width          : 100%;
     }
@@ -199,6 +212,22 @@ $muted-color: $grey-m;
     .nav__item {
       display: inline-flex;
       margin : 0;
+
+      @media (min-width: 1000px) {
+        &:first-of-type {
+          margin-left: -10px;
+        }
+        &:last-of-type {
+          margin-right: -32px;
+        }
+      }
+
+      &:first-of-type {
+        // margin-left: -10px;
+      }
+      &:last-of-type {
+        // margin-right: -32px;
+      }
     }
 
     .nav__link {
@@ -216,7 +245,7 @@ $muted-color: $grey-m;
       width: auto;
 
       @media (min-width: 1000px) and (max-width: 1159px) {
-        width: 840px;
+        width: 880px;
         margin: 0 auto;
       }
       @media (min-width: 1380px) {
@@ -251,6 +280,7 @@ $muted-color: $grey-m;
           .nav__link {
             font-size: 24px;
             color: $black;
+            line-height: 1.2;  
 
             @media (min-width: 1000px) {
               font-size: 12px;

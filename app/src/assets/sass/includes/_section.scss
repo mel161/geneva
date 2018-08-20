@@ -27,7 +27,7 @@ $base-font-size: 20px;
   @include variant(horizontal) {
     display   : flex;
     flex-basis: 100%;
-    margin-top: 45px;
+    margin-top: 35px;
 
     .container {
       flex-direction: column;
@@ -46,7 +46,7 @@ $base-font-size: 20px;
 
 
       .section__title {
-        margin: 20px;
+        margin: 0 20px 10px;
 
         @media (min-width: 1000px) {
           margin-right: 40px;

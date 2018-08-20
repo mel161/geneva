@@ -154,7 +154,12 @@ $active-color: $accent;
       }
     }
     @media (min-width: 1000px) {
+      font-size: 12px;
       display: block;
+    }
+
+    @media (min-width: 1160px) {
+      font-size: 14px;
     }
 
     .sticky & {
@@ -206,7 +211,7 @@ $active-color: $accent;
 
     svg {
       width : 40px;
-      height: auto;
+      height: 21px;
     }
 
     .svg-menu-toggle {

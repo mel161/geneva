@@ -63,6 +63,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      padding: 40px;
     }
 
     @media (min-width: 1380px) {
@@ -88,7 +89,8 @@
       width: 100%;
       text-align: left;
       font-size: 36px;
-      padding-right: 90px;
+      padding-right: 30px;
+      margin: -15px 0 55px;
     }
     @media (min-width: 1380px) {
       width: 100%;
@@ -101,6 +103,7 @@
   .card__text {
     font-size: 16px;
     font-weight: 300;
+    margin: 0;
 
     @media (min-width: 1380px) {
       width: 100%;

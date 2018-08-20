@@ -54,6 +54,14 @@ $margin-big: $margin * 2;
     justify-content: space-between;
     margin         : 0 auto;
 
+    .map--location & {
+      width: 50px;
+      height: 120px;
+      flex-direction: column;
+      // margin-right: 10px;
+      margin-left: 10px;
+    }
+
     @media (min-width: 1000px) {
       width: 50px;
       height: 120px;
@@ -88,7 +96,7 @@ $margin-big: $margin * 2;
     left            : 0;
     background-color: #e6e6e6;
     padding         : 20px;
-    z-index         : 4;
+    z-index         : 11;
     width           : 100%;
     text-align      : center;
 
@@ -156,6 +164,7 @@ $margin-big: $margin * 2;
     @media (min-width: 1000px) {
       height  : 600px;
       position: relative;
+      z-index: 2;
     }
   }
 
@@ -188,7 +197,14 @@ $margin-big: $margin * 2;
 [class$="controls__control"] {
   width : 100%;
   right : 0 !important;
-  bottom: 40px !important;
+  bottom: 70px !important;
+
+  .map--location & {
+    bottom: 320px !important;
+    right: auto !important;
+    left: 0 !important;
+    width: auto;
+  }
 
   @media (min-width: 1000px) {
     right: 0 !important;
