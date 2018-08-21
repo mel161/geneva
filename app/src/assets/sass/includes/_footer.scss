@@ -179,6 +179,10 @@
         position: absolute;
         top: 160px;
         text-align: left;
+
+        .heading {
+          text-align: left;
+        }
       }
 
       .copyright {
@@ -205,7 +209,7 @@
       }
 
       .contacts--office {
-        margin: -5px 0 0 27px;
+        margin: -5px 0 0 0;
       }
 
       .copyright {

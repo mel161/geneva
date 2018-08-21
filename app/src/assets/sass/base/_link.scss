@@ -19,6 +19,10 @@
   // Dashed Underline Style
   @include variant(dashed) {
     border-bottom: 1px dashed $black;
+
+    .copyright & {
+      border-color: $grey;
+    }
   };
   @include variant(to-top) {
     margin        : 35px 0;
@@ -60,7 +64,7 @@
       }
     }
 
-    &:hover {
+    &:active {
       background-color: $accent;
     }
     @media (min-width: 1000px) {

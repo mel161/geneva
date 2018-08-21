@@ -155,9 +155,8 @@ $active-color: $accent;
     }
     @media (min-width: 1000px) {
       font-size: 12px;
-      display: block;
+      display  : block;
     }
-
     @media (min-width: 1160px) {
       font-size: 14px;
     }
@@ -298,9 +297,16 @@ $active-color: $accent;
   padding         : 23px 60px;
   text-decoration : none;
   text-transform  : uppercase;
-  // Hover
-  &:hover {
+  // Active
+  &:active {
     background-color: $active-color;
     border-color    : $active-color;
+  }
+  // Hover
+  @media (min-width: 1000px) {
+    &:hover {
+      background-color: $active-color;
+      border-color    : $active-color;
+    }
   }
 }

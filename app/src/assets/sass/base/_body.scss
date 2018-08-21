@@ -208,7 +208,11 @@ body {
 .video-container {
   margin: 10px 11px 70px;
 	height: auto;
-  @include aspect-ratio(16,9.5);
+  @include aspect-ratio(16,9);
+
+  &:before{
+    padding-top: calc( 56.25% + 8px );
+  }
 
   @media (min-width: 1000px) {
     width: 960px;
@@ -221,14 +225,6 @@ body {
   	left: 0;
   	width: 100%;
   	height: 100%;
-
-    body {
-      margin: 0;
-    }
-
-    video {
-      background-color: transparent !important;
-    }
   }
 
 }
