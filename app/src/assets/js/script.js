@@ -15,11 +15,11 @@ import './partials/_form.min.js'
 //
 
 // Map Location
-import './partials/_map-location.min.js'
+import './partials/_map-location.js'
 //
 
 // Map Contacts
-import './partials/_map-contacts.min.js'
+import './partials/_map-contacts.js'
 //
 
 jQuery(document).ready(function() {
